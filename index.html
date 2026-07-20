@@ -30,7 +30,6 @@
         body { font-family: 'DM Sans', -apple-system, sans-serif; background: var(--bg-primary); color: var(--text-primary); transition: background-color 0.3s, color 0.3s; max-width: 428px; margin: 0 auto; min-height: 100vh; padding-bottom: 80px; }
         .header { padding: 12px 16px; background: var(--bg-secondary); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .header-logo { display: flex; align-items: center; gap: 10px; }
-        .header-logo img { width: 38px; height: 38px; object-fit: contain; }
         .header-logo .app-name { font-size: 20px; font-weight: 700; }
         .header-actions { display: flex; gap: 8px; align-items: center; }
         .theme-toggle { background: none; border: none; font-size: 22px; cursor: pointer; padding: 6px; }
@@ -109,12 +108,10 @@
         .quick-btn { background: var(--bg-secondary); border: 2px solid var(--border); border-radius: 14px; padding: 22px 16px; font-size: 15px; font-weight: 700; color: var(--text-primary); cursor: pointer; transition: all 0.15s; display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow); }
         .quick-btn .icon { font-size: 30px; }
         .quick-btn:active { transform: scale(0.95); background: var(--accent); color: white; border-color: var(--accent); }
-        /* MULTIPLICADOR */
         .mult-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 6px; margin-bottom: 18px; }
         .mult-btn { padding: 12px 4px; border: 2px solid var(--border); border-radius: 10px; background: var(--bg-secondary); color: var(--text-secondary); font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; transition: all 0.15s; }
         .mult-btn.active { border-color: var(--success); background: var(--success-light); color: var(--success); }
         .mult-btn:active { transform: scale(0.95); }
-        /* HISTORIAL BLOQUES */
         .hist-section-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; cursor: pointer; box-shadow: var(--shadow); transition: all 0.15s; }
         .hist-section-header:active { background: var(--bg-tertiary); }
         .hist-section-title { font-size: 17px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
@@ -146,27 +143,21 @@
         .hist-trip-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
         .hist-trip-row:last-child { border-bottom: none; }
         .hist-trip-note { font-size: 11px; color: var(--text-secondary); margin-top: 2px; font-style: italic; }
-        /* NOTAS SECTION */
         .note-item { padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--bg-secondary); }
         .note-date { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; }
         .note-route { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
         .note-text { font-size: 13px; color: var(--text-primary); font-style: italic; }
-        /* DIRECTORIO */
         .plant-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 8px; background: var(--bg-secondary); cursor: pointer; transition: all 0.15s; }
         .plant-item:active { background: var(--bg-tertiary); }
         .plant-name { font-size: 15px; font-weight: 700; }
         .plant-arrow { font-size: 13px; color: var(--text-secondary); }
-        /* DELETE BUTTON */
         .delete-trip-btn { background: none; border: none; cursor: pointer; font-size: 16px; padding: 2px 4px; opacity: 0.5; transition: opacity 0.15s; color: var(--danger); }
         .delete-trip-btn:hover { opacity: 1; }
-        /* EDIT TRIP INLINE */
         .edit-trip-inline { background: var(--bg-tertiary); border-radius: 10px; padding: 12px; margin-top: 8px; display: none; }
         .edit-trip-inline.open { display: block; }
-        /* BADGES */
         .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
         .badge-paid { background: var(--success-light); color: var(--success); }
         .badge-pending { background: var(--warning-light); color: var(--warning); }
-        /* SAVINGS */
         .savings-goal { border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
         .savings-goal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
         .savings-goal-name { font-size: 15px; font-weight: 700; }
@@ -175,20 +166,16 @@
         .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
         .progress-bar { background: var(--border); height: 8px; border-radius: 4px; overflow: hidden; }
         .progress-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
-        /* WAIT BUTTONS */
         .wait-btn { padding: 10px 6px; border: 2px solid var(--border); border-radius: 10px; background: var(--bg-secondary); color: var(--text-secondary); font-size: 13px; font-weight: 600; cursor: pointer; text-align: center; transition: all 0.15s; }
         .wait-btn.active { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
-        /* SECTION TITLE */
         .section-title { font-size: 13px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin: 18px 0 10px; }
         .info-box { background: var(--bg-tertiary); border-radius: 10px; padding: 12px 14px; font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px; }
-        /* TOGGLE */
         .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
         .toggle-row:last-child { border-bottom: none; }
         .toggle-switch { width: 50px; height: 28px; background: var(--border); border-radius: 14px; position: relative; cursor: pointer; transition: background 0.3s; flex-shrink: 0; }
         .toggle-switch.on { background: var(--accent); }
         .toggle-switch::after { content: ''; position: absolute; width: 22px; height: 22px; background: white; border-radius: 50%; top: 3px; left: 3px; transition: transform 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
         .toggle-switch.on::after { transform: translateX(22px); }
-        /* ALFRED */
         .alfred-export-card { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid #334155; border-radius: 14px; padding: 20px; margin-bottom: 14px; cursor: pointer; transition: transform 0.15s; }
         .alfred-export-card:active { transform: scale(0.98); }
         .alfred-export-card .ae-title { font-size: 15px; font-weight: 700; color: #f1f5f9; margin-bottom: 6px; }
@@ -196,12 +183,10 @@
         .alfred-export-card .ae-btn { background: #3b82f6; color: white; border: none; border-radius: 8px; padding: 12px 16px; font-size: 14px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; width: 100%; }
         .alfred-export-card .ae-hint { font-size: 11px; color: #64748b; margin-top: 10px; text-align: center; }
         .json-output { background: var(--bg-tertiary); border-radius: 10px; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-primary); white-space: pre-wrap; word-break: break-all; max-height: 300px; overflow-y: auto; margin-top: 14px; border: 1px solid var(--border); display: none; }
-        /* EMPTY STATE */
         .empty-state { text-align: center; padding: 48px 24px; }
         .empty-state .es-icon { font-size: 52px; margin-bottom: 16px; }
         .empty-state .es-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
         .empty-state .es-sub { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
-        /* MODALS */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 300; align-items: flex-end; justify-content: center; }
         .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
         .modal-sheet { background: var(--bg-primary); border-radius: 20px 20px 0 0; padding: 8px 20px 40px; width: 100%; max-width: 428px; max-height: 85vh; overflow-y: auto; }
@@ -215,21 +200,17 @@
         .mode-switch-emoji { font-size: 52px; margin-bottom: 12px; }
         .mode-switch-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
         .mode-switch-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.5; }
-        /* OIL ALERT */
         .oil-alert-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 500; align-items: center; justify-content: center; padding: 20px; }
         .oil-alert-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
         .oil-alert-card { background: var(--bg-primary); border-radius: 20px; padding: 28px 24px; width: 100%; max-width: 360px; text-align: center; }
-        /* STATUS TOGGLE */
         .status-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
         .status-btn { padding: 12px; border: 2px solid var(--border); border-radius: 10px; background: var(--bg-secondary); color: var(--text-secondary); font-size: 14px; font-weight: 600; cursor: pointer; text-align: center; transition: all 0.15s; }
         .status-btn.paid.active { border-color: var(--success); background: var(--success-light); color: var(--success); }
         .status-btn.pending.active { border-color: var(--warning); background: var(--warning-light); color: var(--warning); }
-        /* BOTTOM NAV */
         .bottom-nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 428px; background: var(--bg-secondary); border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 10px 0 14px; }
         .nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 14px; cursor: pointer; color: var(--text-secondary); transition: color 0.15s; text-decoration: none; font-size: 11px; font-weight: 600; }
         .nav-item .icon { font-size: 22px; }
         .nav-item.active { color: var(--accent); }
-        /* ALERT */
         .alert-item { display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: 12px; margin-bottom: 10px; border: 1px solid var(--border); background: var(--bg-secondary); }
         .alert-icon { font-size: 26px; flex-shrink: 0; }
         .alert-info { flex: 1; }
@@ -239,12 +220,6 @@
         .status-ok { background: var(--success-light); color: var(--success); }
         .status-warn { background: var(--warning-light); color: var(--warning); }
         .link-btn { color: var(--accent); font-weight: 600; font-size: 14px; cursor: pointer; display: inline-block; margin-top: 8px; }
-        .client-item { display: flex; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; background: var(--bg-secondary); }
-        .client-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
-        .client-info { flex: 1; }
-        .client-name { font-weight: 700; font-size: 15px; }
-        .client-meta { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
-        /* PLANT DETAIL */
         .plant-detail-header { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
         .plant-detail-name { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
         .plant-detail-addr { font-size: 13px; color: var(--text-secondary); }
@@ -253,7 +228,6 @@
 </head>
 <body>
 
-<!-- OIL ALERT -->
 <div class="oil-alert-overlay" id="oil-alert">
     <div class="oil-alert-card">
         <div style="font-size:52px;margin-bottom:12px;">🛢️</div>
@@ -263,7 +237,6 @@
     </div>
 </div>
 
-<!-- PENDING MODAL O/O -->
 <div class="modal-overlay" id="pending-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -274,7 +247,6 @@
     </div>
 </div>
 
-<!-- COBRAR SEMANA MODAL -->
 <div class="modal-overlay" id="cobrar-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -284,7 +256,6 @@
     </div>
 </div>
 
-<!-- EDIT DAY MODAL -->
 <div class="modal-overlay" id="edit-day-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -299,7 +270,6 @@
     </div>
 </div>
 
-<!-- EDIT TRIP MODAL -->
 <div class="modal-overlay" id="edit-trip-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -313,7 +283,6 @@
     </div>
 </div>
 
-<!-- CONFIRM DELETE MODAL -->
 <div class="modal-overlay" id="confirm-delete-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -327,7 +296,6 @@
     </div>
 </div>
 
-<!-- GASTOS MODAL -->
 <div class="modal-overlay" id="gastos-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -338,7 +306,6 @@
     </div>
 </div>
 
-<!-- 1099 MODAL -->
 <div class="modal-overlay" id="modal-1099">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -349,7 +316,6 @@
     </div>
 </div>
 
-<!-- MODE SWITCH MODAL -->
 <div class="modal-overlay" id="mode-switch-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -357,7 +323,6 @@
     </div>
 </div>
 
-<!-- RESUMEN SEMANAL POPUP -->
 <div class="modal-overlay" id="resumen-semanal-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -366,7 +331,6 @@
     </div>
 </div>
 
-<!-- PLANT DETAIL MODAL -->
 <div class="modal-overlay" id="plant-detail-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -376,13 +340,10 @@
     </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     EMPLEADO — DASHBOARD
-══════════════════════════════════════════ -->
 <div class="screen active" id="emp-dashboard">
     <div class="header">
         <div class="header-logo">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232563eb'/%3E%3Ctext x='50' y='67' text-anchor='middle' font-size='50' fill='white'%3E🚛%3C/text%3E%3C/svg%3E" id="logo-img" alt="TruckLog">
+            <div style="width:38px;height:38px;background:#2563eb;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;">🚛</div>
             <span class="app-name">TruckLog</span>
         </div>
         <div class="header-actions">
@@ -393,7 +354,6 @@
     <div class="page" id="emp-dashboard-content"></div>
 </div>
 
-<!-- EMPLEADO — AGREGAR -->
 <div class="screen" id="emp-add">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">➕ Agregar</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -405,7 +365,6 @@
     </div>
 </div>
 
-<!-- EMPLEADO — ADD TRIP -->
 <div class="screen" id="emp-add-trip">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:18px;font-weight:700;">🚛 Agregar Viaje</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -461,7 +420,6 @@
     </div>
 </div>
 
-<!-- EMPLEADO — ADD TRIP PASADO -->
 <div class="screen" id="add-trip-pasado">
     <div class="header"><button class="back-btn" onclick="closeModal('edit-day-modal'); showScreen('emp-historial')">←</button><h1 style="font-size:16px;font-weight:700;">➕ Viaje Fecha Pasada</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -498,7 +456,6 @@
     </div>
 </div>
 
-<!-- EMPLEADO — ADD MILES -->
 <div class="screen" id="emp-add-miles">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:18px;font-weight:700;">🛣️ Millas del Día</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -508,7 +465,6 @@
     </div>
 </div>
 
-<!-- EMPLEADO — ADD GASTO -->
 <div class="screen" id="emp-add-gasto">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:16px;font-weight:700;">📝 Gasto Personal 1099</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -531,25 +487,21 @@
     </div>
 </div>
 
-<!-- EMPLEADO — HISTORIAL -->
 <div class="screen" id="emp-historial">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">📋 Historial</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-historial-content"></div>
 </div>
 
-<!-- EMPLEADO — FINANZAS -->
 <div class="screen" id="emp-finances">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">💰 Finanzas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-finances-content"></div>
 </div>
 
-<!-- EMPLEADO — META CAMION DETAIL -->
 <div class="screen" id="emp-savings-camion">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-finances')">←</button><h1 style="font-size:20px;font-weight:700;">🚛 Mi Camión</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-camion-detail-content"></div>
 </div>
 
-<!-- EMPLEADO — AJUSTES -->
 <div class="screen" id="emp-settings">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">⚙️ Ajustes</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -576,13 +528,12 @@
             <div id="irs-reminders-content"></div>
         </div>
         <div class="card"><h2>📄 Información</h2>
-            <div class="row"><span>Versión</span><span class="num">4.7.0</span></div>
+            <div class="row"><span>Versión</span><span class="num">4.7.1</span></div>
             <div class="row"><span>Modo activo</span><span style="color:var(--accent);font-weight:600;">Empleado</span></div>
         </div>
     </div>
 </div>
 
-<!-- EMPLEADO — CONSEJO -->
 <div class="screen" id="emp-consejo">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-settings')">←</button><h1 style="font-size:18px;font-weight:700;">🧠 El Consejo</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -614,13 +565,10 @@
     </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     OWNER OPERATOR — DASHBOARD
-══════════════════════════════════════════ -->
 <div class="screen" id="oo-dashboard">
     <div class="header">
         <div class="header-logo">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2316a34a'/%3E%3Ctext x='50' y='67' text-anchor='middle' font-size='50' fill='white'%3E🚛%3C/text%3E%3C/svg%3E" alt="TruckLog">
+            <div style="width:38px;height:38px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;">🚛</div>
             <span class="app-name">TruckLog</span>
         </div>
         <div class="header-actions">
@@ -631,7 +579,6 @@
     <div class="page" id="oo-dashboard-content"></div>
 </div>
 
-<!-- O/O — AGREGAR -->
 <div class="screen" id="oo-add">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">➕ Agregar</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -644,7 +591,6 @@
     </div>
 </div>
 
-<!-- O/O — ADD TRIP -->
 <div class="screen" id="add-trip">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🚛 Agregar Viaje</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -707,7 +653,6 @@
     </div>
 </div>
 
-<!-- O/O — ADD MILES -->
 <div class="screen" id="add-miles">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🛣️ Millas del Día</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -718,7 +663,6 @@
     </div>
 </div>
 
-<!-- O/O — ADD FUEL -->
 <div class="screen" id="add-fuel">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">⛽ Agregar Diésel</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -733,7 +677,6 @@
     </div>
 </div>
 
-<!-- O/O — ADD EXPENSE -->
 <div class="screen" id="add-expense">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🔧 Agregar Gasto</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -747,25 +690,21 @@
     </div>
 </div>
 
-<!-- O/O — STATS -->
 <div class="screen" id="oo-stats">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">📊 Estadísticas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-stats-content"></div>
 </div>
 
-<!-- O/O — HISTORIAL -->
 <div class="screen" id="oo-historial">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-stats')">←</button><h1 style="font-size:20px;font-weight:700;">📅 Historial</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-historial-content"></div>
 </div>
 
-<!-- O/O — FINANCES -->
 <div class="screen" id="oo-finances">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">💰 Finanzas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-finances-content"></div>
 </div>
 
-<!-- O/O — SETTINGS -->
 <div class="screen" id="oo-settings">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">⚙️ Ajustes</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -784,11 +723,10 @@
             <button class="ae-btn">📋 Exportar para El Consejo</button>
             <div class="ae-hint">Funciona 100% offline • Copia y pega en cualquier IA</div>
         </div>
-        <div class="card"><h2>📄 Información</h2><div class="row"><span>Versión</span><span class="num">4.7.0</span></div><div class="row"><span>Modo activo</span><span style="color:var(--success);font-weight:600;">Owner Operator</span></div></div>
+        <div class="card"><h2>📄 Información</h2><div class="row"><span>Versión</span><span class="num">4.7.1</span></div><div class="row"><span>Modo activo</span><span style="color:var(--success);font-weight:600;">Owner Operator</span></div></div>
     </div>
 </div>
 
-<!-- O/O — CONSEJO EXPORT -->
 <div class="screen" id="consejo-export">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-settings')">←</button><h1 style="font-size:18px;font-weight:700;">🧠 El Consejo</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -807,7 +745,6 @@
     </div>
 </div>
 
-<!-- DIRECTORIO PLANTAS Y CANTERAS -->
 <div class="screen" id="emp-directorio">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-historial')">←</button><h1 style="font-size:18px;font-weight:700;">🏭 Directorio</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -816,7 +753,6 @@
     </div>
 </div>
 
-<!-- ADD PLANT -->
 <div class="screen" id="add-plant">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-directorio')">←</button><h1 style="font-size:18px;font-weight:700;">🏭 Nueva Planta/Cantera</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -829,7 +765,7 @@
                 <div><label style="font-size:12px;">$ Máximo</label><input type="number" id="plant-price-max" placeholder="100"></div>
             </div>
         </div>
-        <div class="form-group"><label>📝 Notas (opcional)</label><textarea id="plant-desc" rows="4" placeholder="Ej: Canal radio ch. 14, entrada por el lado izquierdo, espera corta..." style="width:100%;padding:13px 14px;border:2px solid var(--border);border-radius:10px;font-size:16px;font-family:'DM Sans',sans-serif;background:var(--bg-secondary);color:var(--text-primary);resize:none;"></textarea></div>
+        <div class="form-group"><label>📝 Notas (opcional)</label><textarea id="plant-desc" rows="4" placeholder="Ej: Canal radio ch. 14, entrada por el lado izquierdo..." style="width:100%;padding:13px 14px;border:2px solid var(--border);border-radius:10px;font-size:16px;font-family:'DM Sans',sans-serif;background:var(--bg-secondary);color:var(--text-primary);resize:none;"></textarea></div>
         <button class="btn btn-success" onclick="savePlant()">💾 Guardar en Directorio</button>
         <button class="btn btn-secondary" onclick="showScreen('emp-directorio')">Cancelar</button>
     </div>
@@ -838,16 +774,10 @@
 <div class="bottom-nav" id="bottom-nav"></div>
 
 <script>
-// ═══════════════════════════════════════
-// LOCALSTORAGE
-// ═══════════════════════════════════════
 const LS = { TRIPS:'tl_trips', EXPENSES:'tl_expenses', MILES:'tl_miles', GOALS:'tl_goals', FUEL:'tl_fuel', OO_EXPENSES:'tl_oo_expenses', SETTINGS:'tl_settings', PLANTS:'tl_plants' };
 function lsGet(key) { try { return JSON.parse(localStorage.getItem(key)) || null; } catch { return null; } }
 function lsSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) { console.error('LS error', e); } }
 
-// ═══════════════════════════════════════
-// STATE
-// ═══════════════════════════════════════
 let currentMode = 'emp';
 let payMethod = 'trip', empPayMethod = 'trip', pasadoMethod = 'trip';
 let payStatus = 'paid';
@@ -861,7 +791,6 @@ let currentPlantId = null;
 
 const OIL_LIMIT = 15000, OIL_ALERT_THRESHOLD = 500;
 
-// DATA ACCESSORS
 function getTrips() { return lsGet(LS.TRIPS) || []; }
 function saveTrips(arr) { lsSet(LS.TRIPS, arr); }
 function getExpenses() { return lsGet(LS.EXPENSES) || []; }
@@ -879,9 +808,11 @@ function saveGoals(g) { lsSet(LS.GOALS, g); }
 function getSettings() { return lsGet(LS.SETTINGS) || { currentMiles:0 }; }
 function saveSettings(s) { lsSet(LS.SETTINGS, s); }
 
-// HELPERS
+// ── HELPERS ──
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
-function today() { return new Date().toISOString().split('T')[0]; }
+// FIX 1: today() usa fecha local NY, no UTC
+function today() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+function toLocalStr(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
 function fmtDate(d) {
     const [y,m,day] = d.split('-');
     const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -899,21 +830,21 @@ function getMondayOfWeek(dateStr) {
     const day = d.getDay();
     const diff = (day === 0) ? -6 : 1 - day;
     d.setDate(d.getDate() + diff);
-    return d.toISOString().split('T')[0];
+    return toLocalStr(d);
 }
 function getWeekKey(dateStr) { return getMondayOfWeek(dateStr); }
 function waitLabel(mins) { if (!mins || mins === 0) return ''; return mins === 999 ? '3hr+' : mins >= 60 ? `${mins/60}hr` : `${mins}m`; }
 function fmt$(n) { return '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
 
+// FIX 2: rangos de semana usan fecha local
 function getPrevWeekRange() {
     const now = new Date();
     const day = now.getDay();
     const diffToMon = (day === 0) ? -6 : 1 - day;
     const thisMonday = new Date(now); thisMonday.setDate(now.getDate() + diffToMon);
-    const prevMonday = new Date(thisMonday); prevMonday.setDate(thisMonday.getDate() - 7);
-    const prevSunday = new Date(prevMonday); prevSunday.setDate(prevMonday.getDate() + 6);
-    const toStr = d => d.toISOString().split('T')[0];
-    return { start: toStr(prevMonday), end: toStr(prevSunday) };
+    const prevSunday = new Date(thisMonday); prevSunday.setDate(thisMonday.getDate() - 1);
+    const prevMonday = new Date(prevSunday); prevMonday.setDate(prevSunday.getDate() - 6);
+    return { start: toLocalStr(prevMonday), end: toLocalStr(prevSunday) };
 }
 function getThisWeekRange() {
     const now = new Date();
@@ -921,24 +852,16 @@ function getThisWeekRange() {
     const diffToMon = (day === 0) ? -6 : 1 - day;
     const thisMonday = new Date(now); thisMonday.setDate(now.getDate() + diffToMon);
     const thisSunday = new Date(thisMonday); thisSunday.setDate(thisMonday.getDate() + 6);
-    const toStr = d => d.toISOString().split('T')[0];
-    return { start: toStr(thisMonday), end: toStr(thisSunday) };
+    return { start: toLocalStr(thisMonday), end: toLocalStr(thisSunday) };
 }
 function getThisMonthRange() {
     const now = new Date();
     const y = now.getFullYear(), m = now.getMonth();
-    return { start: `${y}-${String(m+1).padStart(2,'0')}-01`, end: new Date(y, m+1, 0).toISOString().split('T')[0] };
+    const lastDay = new Date(y, m+1, 0);
+    return { start: `${y}-${String(m+1).padStart(2,'0')}-01`, end: toLocalStr(lastDay) };
 }
 
-// ═══════════════════════════════════════
-// LOGO — inject real PNG via base64 or fallback
-// ═══════════════════════════════════════
-const LOGO_SVG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23111'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='44' fill='white'%3E🚛%3C/text%3E%3C/svg%3E";
-document.querySelectorAll('#logo-img, .logo-img').forEach(img => { img.onerror = () => { img.src = LOGO_SVG; }; });
-
-// ═══════════════════════════════════════
-// NAV
-// ═══════════════════════════════════════
+// ── NAV ──
 const empNavMap = { 'emp-dashboard':'nav-home','emp-add':'nav-add','emp-add-trip':'nav-add','emp-add-miles':'nav-add','emp-add-gasto':'nav-add','add-trip-pasado':'nav-hist','emp-historial':'nav-hist','emp-directorio':'nav-hist','add-plant':'nav-hist','emp-finances':'nav-fin','emp-savings-camion':'nav-fin','emp-settings':'nav-cfg','emp-consejo':'nav-cfg' };
 const ooNavMap = { 'oo-dashboard':'nav-home','oo-add':'nav-add','add-trip':'nav-add','add-miles':'nav-add','add-fuel':'nav-add','add-expense':'nav-add','oo-stats':'nav-stats','oo-historial':'nav-stats','consejo-export':'nav-cfg','oo-finances':'nav-fin','oo-settings':'nav-cfg' };
 
@@ -978,24 +901,24 @@ function showScreen(id) {
     if (id === 'oo-dashboard') renderOODashboard();
     if (id === 'oo-stats') renderOOStats();
     if (id === 'oo-historial') renderOOHistorial();
+    if (id === 'oo-finances') renderOOFinances(); // FIX 3
     if (id === 'emp-settings') renderIRSReminders();
 }
 
-// ═══════════════════════════════════════
-// EMPLEADO DASHBOARD
-// ═══════════════════════════════════════
+// ── EMP DASHBOARD ──
 function renderEmpDashboard() {
     const trips = getTrips().filter(t => t.mode === 'emp');
     const el = document.getElementById('emp-dashboard-content');
     if (trips.length === 0) {
-        el.innerHTML = `<div class="empty-state"><div class="es-icon">🚛</div><div class="es-title">¡Bienvenido a TruckLog Pro!</div><div class="es-sub">Registra tu primer viaje y empieza a construir tu historial. Cada viaje te acerca al camión.</div><button class="btn btn-primary" onclick="showScreen('emp-add-trip')">➕ Registrar primer viaje</button></div>`;
+        el.innerHTML = `<div class="empty-state"><div class="es-icon">🚛</div><div class="es-title">¡Bienvenido a TruckLog Pro!</div><div class="es-sub">Registra tu primer viaje y empieza a construir tu historial.</div><button class="btn btn-primary" onclick="showScreen('emp-add-trip')">➕ Registrar primer viaje</button></div>`;
         return;
     }
     const todayStr = today();
     const todayTrips = trips.filter(t => t.date === todayStr);
     const todayTotal = todayTrips.reduce((s,t) => s+t.amount, 0);
     const yd = new Date(); yd.setDate(yd.getDate()-1);
-    const ydStr = yd.toISOString().split('T')[0];
+    // FIX: ayer usa fecha local
+    const ydStr = toLocalStr(yd);
     const ydTrips = trips.filter(t => t.date === ydStr);
     const ydTotal = ydTrips.reduce((s,t) => s+t.amount, 0);
     const prev = getPrevWeekRange();
@@ -1022,38 +945,24 @@ function renderEmpDashboard() {
     el.innerHTML = html;
 }
 
-// ═══════════════════════════════════════
-// EMPLEADO HISTORIAL — 3 BLOQUES
-// ═══════════════════════════════════════
+// ── EMP HISTORIAL ──
 function renderEmpHistorial() {
     const trips = getTrips().filter(t => t.mode === 'emp');
-    const expenses = getExpenses();
     const plants = getPlants();
     const el = document.getElementById('emp-historial-content');
     if (trips.length === 0 && plants.length === 0) {
         el.innerHTML = `<div class="empty-state"><div class="es-icon">📋</div><div class="es-title">Sin historial aún</div><div class="es-sub">Tus viajes aparecerán aquí organizados por mes, semana y día.</div><button class="btn btn-primary" onclick="showScreen('emp-add-trip')">➕ Registrar primer viaje</button></div>`;
         return;
     }
-
     let html = '';
-
-    // ── BLOQUE 1: VIAJES (GRANDE, PROTAGONISTA) ──
-    html += `<div class="hist-section-header" onclick="toggleSection('sec-viajes')">
-        <div class="hist-section-title">🚛 Viajes</div>
-        <div style="display:flex;align-items:center;gap:8px;">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--success);">${fmt$(trips.reduce((s,t)=>s+t.amount,0))}</span>
-            <span class="hist-section-arrow open" id="arr-sec-viajes">›</span>
-        </div>
-    </div>
-    <div class="hist-section-body open" id="sec-viajes">`;
-
+    html += `<div class="hist-section-header" onclick="toggleSection('sec-viajes')"><div class="hist-section-title">🚛 Viajes</div><div style="display:flex;align-items:center;gap:8px;"><span style="font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--success);">${fmt$(trips.reduce((s,t)=>s+t.amount,0))}</span><span class="hist-section-arrow open" id="arr-sec-viajes">›</span></div></div>`;
+    html += `<div class="hist-section-body open" id="sec-viajes">`;
     if (trips.length === 0) {
         html += `<div style="text-align:center;padding:20px;color:var(--text-secondary);">Sin viajes registrados</div>`;
     } else {
         const byMonth = {};
         trips.forEach(t => {
-            const mo = t.date.slice(0,7);
-            const wk = getWeekKey(t.date);
+            const mo = t.date.slice(0,7); const wk = getWeekKey(t.date);
             if (!byMonth[mo]) byMonth[mo] = {};
             if (!byMonth[mo][wk]) byMonth[mo][wk] = {};
             if (!byMonth[mo][wk][t.date]) byMonth[mo][wk][t.date] = [];
@@ -1078,17 +987,7 @@ function renderEmpHistorial() {
                     html += `<div class="hist-day"><div class="hist-day-header" onclick="toggleDayAcc(this)"><div class="hist-day-left"><span class="hist-arrow" style="font-size:11px;">›</span><div><div class="hist-day-label">${fmtDate(date)}</div><div style="font-size:11px;color:var(--text-secondary);">${dayTrips.length} viajes</div></div></div><div class="hist-day-right"><div class="hist-day-amount">${fmt$(dayTotal)}</div><div class="edit-day-btn" onclick="event.stopPropagation(); openEditDayModal('${date}')">✏️</div></div></div><div class="hist-day-trips">`;
                     dayTrips.forEach(t => {
                         const wl = t.waitTime > 0 ? ` • ⏳ ${waitLabel(t.waitTime)}` : '';
-                        html += `<div class="hist-trip-row">
-                            <div style="flex:1;">
-                                <div>${t.route}</div>
-                                <div class="hist-trip-note">${t.methodLabel}${wl}${t.notes ? ' · 📝 ' + t.notes : ''}</div>
-                            </div>
-                            <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
-                                <span class="pos">${fmt$(t.amount)}</span>
-                                <button class="delete-trip-btn" onclick="askDeleteTrip('${t.id}','emp')" title="Borrar">🗑️</button>
-                                <button onclick="openEditTripModal('${t.id}')" style="background:none;border:none;cursor:pointer;font-size:14px;padding:2px 4px;opacity:0.6;" title="Editar">✏️</button>
-                            </div>
-                        </div>`;
+                        html += `<div class="hist-trip-row"><div style="flex:1;"><div>${t.route}</div><div class="hist-trip-note">${t.methodLabel}${wl}${t.notes ? ' · 📝 ' + t.notes : ''}</div></div><div style="display:flex;align-items:center;gap:6px;flex-shrink:0;"><span class="pos">${fmt$(t.amount)}</span><button class="delete-trip-btn" onclick="askDeleteTrip('${t.id}','emp')" title="Borrar">🗑️</button><button onclick="openEditTripModal('${t.id}')" style="background:none;border:none;cursor:pointer;font-size:14px;padding:2px 4px;opacity:0.6;" title="Editar">✏️</button></div></div>`;
                     });
                     html += `</div></div>`;
                 });
@@ -1098,64 +997,27 @@ function renderEmpHistorial() {
         });
     }
     html += `</div>`;
-
-    // ── BLOQUE 2: NOTAS ──
     const tripsWithNotes = trips.filter(t => t.notes && t.notes.trim() !== '').sort((a,b)=>b.date.localeCompare(a.date));
-    html += `<div class="hist-section-header" onclick="toggleSection('sec-notas')">
-        <div class="hist-section-title">📝 Notas</div>
-        <div style="display:flex;align-items:center;gap:8px;">
-            <span style="font-size:13px;color:var(--text-secondary);">${tripsWithNotes.length} notas</span>
-            <span class="hist-section-arrow" id="arr-sec-notas">›</span>
-        </div>
-    </div>
-    <div class="hist-section-body" id="sec-notas">`;
+    html += `<div class="hist-section-header" onclick="toggleSection('sec-notas')"><div class="hist-section-title">📝 Notas</div><div style="display:flex;align-items:center;gap:8px;"><span style="font-size:13px;color:var(--text-secondary);">${tripsWithNotes.length} notas</span><span class="hist-section-arrow" id="arr-sec-notas">›</span></div></div>`;
+    html += `<div class="hist-section-body" id="sec-notas">`;
     if (tripsWithNotes.length === 0) {
         html += `<div style="text-align:center;padding:20px;color:var(--text-secondary);">Las notas de tus viajes aparecerán aquí</div>`;
     } else {
-        tripsWithNotes.forEach(t => {
-            html += `<div class="note-item"><div class="note-date">${fmtDate(t.date)}</div><div class="note-route">${t.route}</div><div class="note-text">"${t.notes}"</div></div>`;
-        });
+        tripsWithNotes.forEach(t => { html += `<div class="note-item"><div class="note-date">${fmtDate(t.date)}</div><div class="note-route">${t.route}</div><div class="note-text">"${t.notes}"</div></div>`; });
     }
     html += `</div>`;
-
-    // ── BLOQUE 3: PLANTAS Y CANTERAS ──
-    html += `<div class="hist-section-header" onclick="toggleSection('sec-plantas')">
-        <div class="hist-section-title">🏭 Plantas y Canteras</div>
-        <div style="display:flex;align-items:center;gap:8px;">
-            <span style="font-size:13px;color:var(--text-secondary);">${plants.length} lugares</span>
-            <span class="hist-section-arrow" id="arr-sec-plantas">›</span>
-        </div>
-    </div>
-    <div class="hist-section-body" id="sec-plantas">`;
+    html += `<div class="hist-section-header" onclick="toggleSection('sec-plantas')"><div class="hist-section-title">🏭 Plantas y Canteras</div><div style="display:flex;align-items:center;gap:8px;"><span style="font-size:13px;color:var(--text-secondary);">${plants.length} lugares</span><span class="hist-section-arrow" id="arr-sec-plantas">›</span></div></div>`;
+    html += `<div class="hist-section-body" id="sec-plantas">`;
     if (plants.length === 0) {
         html += `<div style="text-align:center;padding:20px;color:var(--text-secondary);">Tu directorio está vacío</div>`;
     } else {
         plants.forEach(p => {
             const priceTag = (p.priceMin || p.priceMax) ? `<span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--success);">${p.priceMin ? '$'+p.priceMin : '?'}–${p.priceMax ? '$'+p.priceMax : '?'}</span>` : '';
             const hasDetail = p.address || p.desc;
-            html += `<div class="hist-block" style="margin-bottom:8px;">
-                <div class="hist-header" onclick="${hasDetail ? `toggleAccordion(this)` : `openPlantDetail('${p.id}')`}" style="padding:12px 16px;">
-                    <div class="hist-header-left">
-                        ${hasDetail ? `<span class="hist-arrow">›</span>` : ''}
-                        <div>
-                            <div class="hist-label">🏭 ${p.name}</div>
-                        </div>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:10px;">
-                        ${priceTag}
-                        <button onclick="event.stopPropagation();openPlantDetail('${p.id}')" style="background:none;border:none;cursor:pointer;font-size:13px;color:var(--text-secondary);padding:2px 6px;">✏️</button>
-                    </div>
-                </div>
-                ${hasDetail ? `<div class="hist-children" style="padding:0 16px 12px;">
-                    ${p.address ? `<div style="font-size:13px;color:var(--text-secondary);margin-bottom:6px;">📍 ${p.address}</div>` : ''}
-                    ${p.desc ? `<div style="font-size:13px;color:var(--text-primary);line-height:1.5;background:var(--bg-tertiary);border-radius:8px;padding:10px 12px;">📝 ${p.desc}</div>` : ''}
-                </div>` : ''}
-            </div>`;
+            html += `<div class="hist-block" style="margin-bottom:8px;"><div class="hist-header" onclick="${hasDetail ? `toggleAccordion(this)` : `openPlantDetail('${p.id}')`}" style="padding:12px 16px;"><div class="hist-header-left">${hasDetail ? `<span class="hist-arrow">›</span>` : ''}<div><div class="hist-label">🏭 ${p.name}</div></div></div><div style="display:flex;align-items:center;gap:10px;">${priceTag}<button onclick="event.stopPropagation();openPlantDetail('${p.id}')" style="background:none;border:none;cursor:pointer;font-size:13px;color:var(--text-secondary);padding:2px 6px;">✏️</button></div></div>${hasDetail ? `<div class="hist-children" style="padding:0 16px 12px;">${p.address ? `<div style="font-size:13px;color:var(--text-secondary);margin-bottom:6px;">📍 ${p.address}</div>` : ''}${p.desc ? `<div style="font-size:13px;color:var(--text-primary);line-height:1.5;background:var(--bg-tertiary);border-radius:8px;padding:10px 12px;">📝 ${p.desc}</div>` : ''}</div>` : ''}</div>`;
         });
     }
-    html += `<button class="btn btn-primary" style="margin-top:12px;" onclick="showScreen('add-plant')">➕ Agregar Planta o Cantera</button>`;
-    html += `</div>`;
-
+    html += `<button class="btn btn-primary" style="margin-top:12px;" onclick="showScreen('add-plant')">➕ Agregar Planta o Cantera</button></div>`;
     el.innerHTML = html;
 }
 
@@ -1166,16 +1028,11 @@ function toggleSection(id) {
     if (arrow) arrow.classList.toggle('open');
 }
 
-// ═══════════════════════════════════════
-// DIRECTORIO
-// ═══════════════════════════════════════
+// ── DIRECTORIO ──
 function renderDirectorio() {
     const plants = getPlants();
     const el = document.getElementById('directorio-list');
-    if (plants.length === 0) {
-        el.innerHTML = `<div class="empty-state"><div class="es-icon">🏭</div><div class="es-title">Directorio vacío</div><div class="es-sub">Agrega las plantas y canteras donde trabajas.</div></div>`;
-        return;
-    }
+    if (plants.length === 0) { el.innerHTML = `<div class="empty-state"><div class="es-icon">🏭</div><div class="es-title">Directorio vacío</div><div class="es-sub">Agrega las plantas y canteras donde trabajas.</div></div>`; return; }
     el.innerHTML = plants.map(p => `<div class="plant-item" onclick="openPlantDetail('${p.id}')"><div><div class="plant-name">🏭 ${p.name}</div>${p.address ? `<div style="font-size:12px;color:var(--text-secondary);margin-top:2px;">${p.address}</div>` : ''}</div><span class="plant-arrow">›</span></div>`).join('');
 }
 
@@ -1200,33 +1057,23 @@ function savePlant() {
 
 function openPlantDetail(id) {
     currentPlantId = id;
-    const plants = getPlants();
-    const p = plants.find(x => x.id === id);
+    const p = getPlants().find(x => x.id === id);
     if (!p) return;
     const priceStr = (p.priceMin || p.priceMax) ? `<div style="font-size:15px;font-weight:700;color:var(--success);margin-top:8px;">💰 ${p.priceMin ? '$'+p.priceMin : '?'} — ${p.priceMax ? '$'+p.priceMax : '?'}</div>` : '';
-    document.getElementById('plant-detail-content').innerHTML = `
-        <div class="plant-detail-header">
-            <div class="plant-detail-name">🏭 ${p.name}</div>
-            ${p.address ? `<div class="plant-detail-addr">📍 ${p.address}</div>` : ''}
-            ${priceStr}
-            ${p.desc ? `<div class="plant-detail-desc">📝 ${p.desc}</div>` : ''}
-        </div>`;
+    document.getElementById('plant-detail-content').innerHTML = `<div class="plant-detail-header"><div class="plant-detail-name">🏭 ${p.name}</div>${p.address ? `<div class="plant-detail-addr">📍 ${p.address}</div>` : ''}${priceStr}${p.desc ? `<div class="plant-detail-desc">📝 ${p.desc}</div>` : ''}</div>`;
     openModal('plant-detail-modal');
 }
 
 function deletePlant() {
     if (!currentPlantId) return;
-    const plants = getPlants().filter(p => p.id !== currentPlantId);
-    savePlants(plants);
+    savePlants(getPlants().filter(p => p.id !== currentPlantId));
     closeModal('plant-detail-modal');
     currentPlantId = null;
     renderDirectorio();
     renderEmpHistorial();
 }
 
-// ═══════════════════════════════════════
-// EMPLEADO FINANZAS
-// ═══════════════════════════════════════
+// ── EMP FINANZAS ──
 function renderEmpFinances() {
     const trips = getTrips().filter(t => t.mode === 'emp');
     const expenses = getExpenses();
@@ -1287,9 +1134,7 @@ function renderEmpCamionDetail() {
         <button class="btn btn-primary" onclick="addDeposit('camion')">+ Registrar Depósito</button>`;
 }
 
-// ═══════════════════════════════════════
-// O/O DASHBOARD
-// ═══════════════════════════════════════
+// ── OO DASHBOARD ──
 function renderOODashboard() {
     const trips = getTrips().filter(t => t.mode === 'oo');
     const ooExp = getOOExpenses();
@@ -1298,8 +1143,9 @@ function renderOODashboard() {
         el.innerHTML = `<div class="empty-state"><div class="es-icon">🚛</div><div class="es-title">¡Modo Owner Operator!</div><div class="es-sub">Registra tu primer viaje como dueño.</div><button class="btn btn-success" onclick="showScreen('add-trip')">➕ Registrar primer viaje</button></div>`;
         return;
     }
-    const ydDate = new Date(); ydDate.setDate(ydDate.getDate()-1);
-    const ydStr = ydDate.toISOString().split('T')[0];
+    const yd = new Date(); yd.setDate(yd.getDate()-1);
+    // FIX: ayer en O/O usa fecha local
+    const ydStr = toLocalStr(yd);
     const ydTrips = trips.filter(t => t.date === ydStr);
     const ydGross = ydTrips.reduce((s,t)=>s+t.amount,0);
     const week = getThisWeekRange();
@@ -1317,12 +1163,8 @@ function renderOODashboard() {
     const allPending = trips.filter(t=>t.status==='pending');
     const totalPending = allPending.reduce((s,t)=>s+t.amount,0);
     let html = '';
-    if (ydGross > 0) {
-        html += `<div class="tap-card" onclick="openEditDayModal('${ydStr}')"><div class="tc-label">📅 ${fmtDate(ydStr)} (Ayer)</div><div class="tc-amount">${fmt$(ydGross)}</div><div class="tc-sub">${ydTrips.length} viajes</div></div>`;
-    }
-    if (totalPending > 0) {
-        html += `<div class="pending-banner" onclick="openModal('pending-modal')"><div class="pb-left"><div class="pb-label">⏳ PENDIENTE DE COBRO</div><div class="pb-sub">${allPending.length} viajes →</div></div><div class="pb-right"><div class="pb-amount">${fmt$(totalPending)}</div><div class="pb-arrow">Ver lista →</div></div></div>`;
-    }
+    if (ydGross > 0) { html += `<div class="tap-card" onclick="openEditDayModal('${ydStr}')"><div class="tc-label">📅 ${fmtDate(ydStr)} (Ayer)</div><div class="tc-amount">${fmt$(ydGross)}</div><div class="tc-sub">${ydTrips.length} viajes</div></div>`; }
+    if (totalPending > 0) { html += `<div class="pending-banner" onclick="openModal('pending-modal')"><div class="pb-left"><div class="pb-label">⏳ PENDIENTE DE COBRO</div><div class="pb-sub">${allPending.length} viajes →</div></div><div class="pb-right"><div class="pb-amount">${fmt$(totalPending)}</div><div class="pb-arrow">Ver lista →</div></div></div>`; }
     html += `<div class="card"><div class="row" style="padding-top:0;"><span>Esta semana:</span><span class="pos">${fmt$(wkGross)}</span></div><div class="row"><span>✅ Cobrado:</span><span class="pos">${fmt$(wkCobrado)}</span></div>${wkPending > 0 ? `<div class="row"><span>⏳ Pendiente:</span><span style="color:var(--warning);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:14px;">${fmt$(wkPending)}</span></div>` : ''}${wkExp > 0 ? `<div class="row"><span>Gastos:</span><span class="neg">-${fmt$(wkExp)}</span></div>` : ''}<div class="row total"><span>Neto:</span><span class="pos">${fmt$(wkNeto)}</span></div></div>`;
     html += `<div class="card"><h2>📊 Este Mes</h2><div class="row" style="padding-top:0;"><span>Ingresos:</span><span class="pos">${fmt$(moGross)}</span></div>${moExp > 0 ? `<div class="row"><span>Gastos:</span><span class="neg">-${fmt$(moExp)}</span></div>` : ''}<div class="row total"><span>Ganancia:</span><span class="pos">${fmt$(moNeto)}</span></div></div>`;
     el.innerHTML = html;
@@ -1348,18 +1190,13 @@ function markTripPaid(id) {
     renderOODashboard();
 }
 
-// ═══════════════════════════════════════
-// O/O STATS
-// ═══════════════════════════════════════
+// ── OO STATS ──
 function renderOOStats() {
     const trips = getTrips().filter(t => t.mode === 'oo');
     const ooExp = getOOExpenses();
     const milesData = getMiles();
     const el = document.getElementById('oo-stats-content');
-    if (trips.length === 0) {
-        el.innerHTML = `<div class="empty-state"><div class="es-icon">📊</div><div class="es-title">Sin datos aún</div><div class="es-sub">Registra viajes para ver tus estadísticas.</div></div>`;
-        return;
-    }
+    if (trips.length === 0) { el.innerHTML = `<div class="empty-state"><div class="es-icon">📊</div><div class="es-title">Sin datos aún</div><div class="es-sub">Registra viajes para ver tus estadísticas.</div></div>`; return; }
     const mo = getThisMonthRange();
     const moTrips = trips.filter(t => t.date >= mo.start && t.date <= mo.end);
     const moMiles = milesData.filter(m => m.date >= mo.start && m.date <= mo.end).reduce((s,m)=>s+m.miles,0);
@@ -1375,9 +1212,7 @@ function renderOOStats() {
     el.innerHTML = `<div class="stats-grid"><div class="stat-card"><h3>🛣️ Millas/Mes</h3><div class="value" style="color:var(--accent);">${moMiles.toLocaleString()}</div></div><div class="stat-card"><h3>💰 Prom/Día</h3><div class="value" style="color:var(--success);">${fmt$(avgPerDay)}</div></div><div class="stat-card"><h3>📈 Mejor Sem.</h3><div class="value">${fmt$(bestWk)}</div></div><div class="stat-card"><h3>🚛 Viajes/Mes</h3><div class="value">${moTrips.length}</div></div></div>${clientRows ? `<div class="card"><h2>👥 Ingresos por Cliente</h2>${clientRows}</div>` : ''}<div class="card"><a class="link-btn" onclick="showScreen('oo-historial')" style="margin:0;font-size:16px;">📅 Ver Historial Completo →</a></div>`;
 }
 
-// ═══════════════════════════════════════
-// O/O HISTORIAL
-// ═══════════════════════════════════════
+// ── OO HISTORIAL ──
 function renderOOHistorial() {
     const trips = getTrips().filter(t => t.mode === 'oo');
     const el = document.getElementById('oo-historial-content');
@@ -1418,9 +1253,7 @@ function renderOOHistorial() {
     el.innerHTML = html;
 }
 
-// ═══════════════════════════════════════
-// O/O FINANCES
-// ═══════════════════════════════════════
+// ── OO FINANCES ──
 function renderOOFinances() {
     const trips = getTrips().filter(t => t.mode === 'oo');
     const ooExp = getOOExpenses();
@@ -1446,9 +1279,7 @@ function renderOOFinances() {
         <div class="savings-goal"><div class="savings-goal-header"><div class="savings-goal-name">🏠 Casa Propia</div><div class="savings-goal-amount" style="color:var(--accent);">${fmt$(goals.casa.ahorrado)} / ${fmt$(goals.casa.meta)}</div></div><div class="progress-wrap"><div class="progress-label"><span>${casaPct}%</span><span>Faltan ${fmt$(goals.casa.meta-goals.casa.ahorrado)}</span></div><div class="progress-bar"><div class="progress-fill" style="width:${casaPct>0?casaPct:1}%;background:var(--accent);"></div></div></div><button class="btn btn-secondary btn-sm" style="margin-top:10px;" onclick="addDeposit('casa')">+ Depósito</button></div>`;
 }
 
-// ═══════════════════════════════════════
-// EDIT DAY MODAL
-// ═══════════════════════════════════════
+// ── EDIT DAY MODAL ──
 function openEditDayModal(date) {
     currentEditDay = date;
     const trips = getTrips().filter(t => t.date === date);
@@ -1461,14 +1292,7 @@ function openEditDayModal(date) {
     } else {
         trips.forEach(t => {
             const wl = t.waitTime > 0 ? ` • ⏳ ${waitLabel(t.waitTime)}` : '';
-            html += `<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px;">
-                <div style="flex:1;"><div style="font-weight:600;">${t.route}</div><div style="font-size:11px;color:var(--text-secondary);">${t.methodLabel}${wl}${t.notes ? ' · 📝 ' + t.notes : ''}</div></div>
-                <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
-                    <span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--success);">${fmt$(t.amount)}</span>
-                    <button onclick="openEditTripModal('${t.id}')" style="background:none;border:none;cursor:pointer;font-size:16px;padding:2px 4px;opacity:0.6;">✏️</button>
-                    <button class="delete-trip-btn" onclick="askDeleteTrip('${t.id}','modal')" style="font-size:18px;margin-top:0;" title="Borrar">🗑️</button>
-                </div>
-            </div>`;
+            html += `<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);font-size:14px;"><div style="flex:1;"><div style="font-weight:600;">${t.route}</div><div style="font-size:11px;color:var(--text-secondary);">${t.methodLabel}${wl}${t.notes ? ' · 📝 ' + t.notes : ''}</div></div><div style="display:flex;align-items:center;gap:6px;flex-shrink:0;"><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--success);">${fmt$(t.amount)}</span><button onclick="openEditTripModal('${t.id}')" style="background:none;border:none;cursor:pointer;font-size:16px;padding:2px 4px;opacity:0.6;">✏️</button><button class="delete-trip-btn" onclick="askDeleteTrip('${t.id}','modal')" style="font-size:18px;margin-top:0;" title="Borrar">🗑️</button></div></div>`;
         });
     }
     document.getElementById('edit-day-trips').innerHTML = html;
@@ -1476,12 +1300,9 @@ function openEditDayModal(date) {
     openModal('edit-day-modal');
 }
 
-// ═══════════════════════════════════════
-// EDIT TRIP MODAL
-// ═══════════════════════════════════════
+// ── EDIT TRIP ──
 function openEditTripModal(id) {
-    const trips = getTrips();
-    const t = trips.find(x => x.id === id);
+    const t = getTrips().find(x => x.id === id);
     if (!t) return;
     tripToEdit = id;
     document.getElementById('edit-trip-route-input').value = t.route;
@@ -1505,9 +1326,7 @@ function saveEditTrip() {
     alert('✅ Viaje actualizado');
 }
 
-// ═══════════════════════════════════════
-// COBRAR MODAL
-// ═══════════════════════════════════════
+// ── COBRAR MODAL ──
 function openCobrarModal() {
     const prev = getPrevWeekRange();
     const trips = getTrips().filter(t => t.mode === 'emp' && t.date >= prev.start && t.date <= prev.end);
@@ -1524,12 +1343,9 @@ function openCobrarModal() {
     openModal('cobrar-modal');
 }
 
-// ═══════════════════════════════════════
-// DELETE TRIP
-// ═══════════════════════════════════════
+// ── DELETE TRIP ──
 function askDeleteTrip(id, source) {
-    const trips = getTrips();
-    const t = trips.find(x=>x.id===id);
+    const t = getTrips().find(x=>x.id===id);
     if (!t) return;
     tripToDelete = { id, source };
     document.getElementById('confirm-delete-desc').textContent = `${t.route} — ${fmt$(t.amount)}. Esta acción no se puede deshacer.`;
@@ -1538,24 +1354,18 @@ function askDeleteTrip(id, source) {
 
 function confirmDeleteTrip() {
     if (!tripToDelete) return;
-    const trips = getTrips();
-    const filtered = trips.filter(t => t.id !== tripToDelete.id);
-    saveTrips(filtered);
+    saveTrips(getTrips().filter(t => t.id !== tripToDelete.id));
     closeModal('confirm-delete-modal');
     const src = tripToDelete.source;
     tripToDelete = null;
-    if (src === 'modal' && currentEditDay) {
-        openEditDayModal(currentEditDay);
-    }
+    if (src === 'modal' && currentEditDay) { openEditDayModal(currentEditDay); }
     renderEmpHistorial();
     renderOOHistorial();
     renderEmpDashboard();
     renderOODashboard();
 }
 
-// ═══════════════════════════════════════
-// MULTIPLICADOR
-// ═══════════════════════════════════════
+// ── MULTIPLICADOR ──
 function empSetMult(n, el) {
     empMult = n;
     document.querySelectorAll('#emp-mult-selector .mult-btn').forEach(b => b.classList.remove('active'));
@@ -1568,11 +1378,8 @@ function ooSetMult(n, el) {
     el.classList.add('active');
 }
 
-// ═══════════════════════════════════════
-// EMPLEADO — SAVE TRIP
-// ═══════════════════════════════════════
+// ── EMP SAVE TRIP ──
 let empSessionTrips = [];
-
 function empSetPayMethod(m) {
     empPayMethod = m;
     ['trip','ton','hour'].forEach(t => { document.getElementById('emp-tab-'+t).classList.toggle('active', t===m); document.getElementById('emp-method-'+t).style.display = t===m?'block':'none'; });
@@ -1616,8 +1423,7 @@ function empSaveTrip() {
     document.getElementById('emp-trip-notes').value='';
     document.getElementById('emp-pay-flat').value='';
     document.getElementById('emp-trip-total-display').textContent='$0.00';
-    empWaitTime=0;
-    empMult=1;
+    empWaitTime=0; empMult=1;
     document.querySelectorAll('#emp-wait-time-selector .wait-btn').forEach(b=>b.classList.remove('active'));
     document.querySelector('#emp-wait-time-selector .wait-btn').classList.add('active');
     document.querySelectorAll('#emp-mult-selector .mult-btn').forEach(b=>b.classList.remove('active'));
@@ -1631,10 +1437,7 @@ function empRenderSessionTrips() {
     if (empSessionTrips.length===0) { box.style.display='none'; return; }
     box.style.display='block';
     let total=0, html='';
-    empSessionTrips.forEach(t => {
-        total+=t.amount;
-        html+=`<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;"><div><div style="font-weight:600;">${t.route}</div><div style="font-size:11px;color:var(--text-secondary);">${t.methodLabel}</div></div><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--success);">${fmt$(t.amount)}</span></div>`;
-    });
+    empSessionTrips.forEach(t => { total+=t.amount; html+=`<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;"><div><div style="font-weight:600;">${t.route}</div><div style="font-size:11px;color:var(--text-secondary);">${t.methodLabel}</div></div><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--success);">${fmt$(t.amount)}</span></div>`; });
     list.innerHTML=html;
     totalEl.innerHTML=`<span>Total (${empSessionTrips.length} viajes):</span><span class="pos">${fmt$(total)}</span>`;
 }
@@ -1647,9 +1450,7 @@ function empFinishDay() {
     showScreen('emp-dashboard');
 }
 
-// ═══════════════════════════════════════
-// PASADO TRIP
-// ═══════════════════════════════════════
+// ── PASADO TRIP ──
 function pasadoSetMethod(m) {
     pasadoMethod=m;
     ['trip','ton','hour'].forEach(t => { document.getElementById('pasado-tab-'+t).classList.toggle('active',t===m); document.getElementById('pasado-method-'+t).style.display=t===m?'block':'none'; });
@@ -1689,9 +1490,7 @@ function savePasadoTrip() {
     showScreen('emp-historial');
 }
 
-// ═══════════════════════════════════════
-// MILES & GASTOS
-// ═══════════════════════════════════════
+// ── MILES & GASTOS ──
 function saveEmpMiles() {
     const miles = parseFloat(document.getElementById('emp-miles-input').value)||0;
     if (miles<=0) { alert('Ingresa las millas'); return; }
@@ -1720,11 +1519,8 @@ function saveGasto() {
     showScreen('emp-dashboard');
 }
 
-// ═══════════════════════════════════════
-// O/O — SAVE TRIP
-// ═══════════════════════════════════════
+// ── OO SAVE TRIP ──
 let ooSessionTrips = [];
-
 function setPayMethod(m) {
     payMethod=m;
     ['trip','ton','hour'].forEach(t=>{ document.getElementById('tab-'+t).classList.toggle('active',t===m); document.getElementById('method-'+t).style.display=t===m?'block':'none'; });
@@ -1761,8 +1557,7 @@ function saveOOTrip() {
     const trips=getTrips();
     for (let i = 0; i < ooMult; i++) {
         const trip={id:uid(),mode:'oo',date:dateVal,route,amount:unitAmount,methodLabel,waitTime:waitTimeMinutes,notes,status:payStatus,client};
-        trips.push(trip);
-        ooSessionTrips.push(trip);
+        trips.push(trip); ooSessionTrips.push(trip);
     }
     saveTrips(trips);
     renderOOSessionTrips();
@@ -1771,8 +1566,7 @@ function saveOOTrip() {
     document.getElementById('trip-client').value='';
     document.getElementById('pay-flat').value='';
     document.getElementById('trip-total-display').textContent='$0.00';
-    waitTimeMinutes=0;
-    ooMult=1;
+    waitTimeMinutes=0; ooMult=1;
     document.querySelectorAll('#wait-time-selector .wait-btn').forEach(b=>b.classList.remove('active'));
     document.querySelector('#wait-time-selector .wait-btn').classList.add('active');
     document.querySelectorAll('#oo-mult-selector .mult-btn').forEach(b=>b.classList.remove('active'));
@@ -1803,9 +1597,7 @@ function ooFinishDay() {
     showScreen('oo-dashboard');
 }
 
-// ═══════════════════════════════════════
-// O/O — MILES, FUEL, EXPENSE
-// ═══════════════════════════════════════
+// ── OO MILES, FUEL, EXPENSE ──
 function checkOilWarning() {
     const settings=getSettings();
     const miles=parseFloat(document.getElementById('miles-input').value)||0;
@@ -1854,9 +1646,7 @@ function saveExpense(){
     showScreen('oo-dashboard');
 }
 
-// ═══════════════════════════════════════
-// DEPOSITS
-// ═══════════════════════════════════════
+// ── DEPOSITS ──
 function addDeposit(goalKey) {
     const amt = parseFloat(prompt(`Monto del depósito para ${goalKey === 'ambar' ? 'Ámbar' : goalKey === 'camion' ? 'Camión' : goalKey === 'emergencia' ? 'Emergencia' : 'Casa'} ($):`));
     if (!amt || amt <= 0) return;
@@ -1868,9 +1658,7 @@ function addDeposit(goalKey) {
     alert(`✅ Depósito de ${fmt$(amt)} registrado`);
 }
 
-// ═══════════════════════════════════════
-// MODE SWITCH
-// ═══════════════════════════════════════
+// ── MODE SWITCH ──
 function openModeSwitch() {
     const content=document.getElementById('mode-switch-content');
     if (currentMode==='emp') {
@@ -1888,9 +1676,7 @@ function switchMode(mode) {
     else showScreen('emp-dashboard');
 }
 
-// ═══════════════════════════════════════
-// MODALS & ACCORDION
-// ═══════════════════════════════════════
+// ── MODALS & ACCORDION ──
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 function toggleAccordion(header){
@@ -1906,9 +1692,7 @@ function toggleDayAcc(header){
     if (arrow) arrow.classList.toggle('open');
 }
 
-// ═══════════════════════════════════════
-// JSON EXPORT
-// ═══════════════════════════════════════
+// ── JSON EXPORT ──
 function getFilteredTrips(mode, period) {
     const trips = getTrips().filter(t => t.mode === mode);
     if (period === 'prevweek') { const r=getPrevWeekRange(); return trips.filter(t=>t.date>=r.start&&t.date<=r.end); }
@@ -1916,7 +1700,6 @@ function getFilteredTrips(mode, period) {
     if (period === 'month') { const r=getThisMonthRange(); return trips.filter(t=>t.date>=r.start&&t.date<=r.end); }
     return trips;
 }
-
 function generateEmpJSON() {
     const period=document.getElementById('emp-export-select').value;
     const filtered=getFilteredTrips('emp', period);
@@ -1924,7 +1707,7 @@ function generateEmpJSON() {
     const goals=getGoals();
     const periodLabel = period === 'prevweek' ? 'Semana Pasada (dinero en mano)' : period === 'week' ? 'Semana Actual' : period === 'month' ? 'Este Mes' : 'Todo 2026';
     const data={
-        exportado_por:"TruckLog Pro V4.7 — Modo Empleado",
+        exportado_por:"TruckLog Pro V4.7.1 — Modo Empleado",
         fecha_exportacion:today(),
         periodo:periodLabel,
         nota_importante: period === 'prevweek' ? "Este es el dinero que tienes EN LA MANO para analizar este viernes." : "",
@@ -1951,7 +1734,7 @@ function generateJSON(){
     const ooExp=getOOExpenses();
     const periodLabel = period === 'prevweek' ? 'Semana Pasada' : period === 'week' ? 'Semana Actual' : period === 'month' ? 'Este Mes' : 'Todo el historial';
     const data={
-        exportado_por:"TruckLog Pro V4.7 — Owner Operator",
+        exportado_por:"TruckLog Pro V4.7.1 — Owner Operator",
         fecha_exportacion:today(),
         periodo:periodLabel,
         resumen:{ingresos:filtered.reduce((s,t)=>s+t.amount,0),gastos:ooExp.reduce((s,e)=>s+e.amount,0),viajes:filtered.length},
@@ -1969,9 +1752,7 @@ function copyJSON(){
     if (navigator.clipboard){navigator.clipboard.writeText(text).then(()=>{const btn=document.getElementById('copy-json-btn');btn.textContent='✅ ¡Copiado!';btn.style.background='var(--success)';btn.style.color='white';setTimeout(()=>{btn.textContent='📋 Copiar';btn.style.background='';btn.style.color='';},2000);});}
 }
 
-// ═══════════════════════════════════════
-// IRS TRIMESTRAL
-// ═══════════════════════════════════════
+// ── IRS TRIMESTRAL ──
 function renderIRSReminders() {
     const el = document.getElementById('irs-reminders-content');
     if (!el) return;
@@ -1993,17 +1774,12 @@ function renderIRSReminders() {
         else if (diffDays <= 30) { status = `⚠️ ${diffDays}d`; color = 'var(--danger)'; }
         else if (diffDays <= 60) { status = `${diffDays}d`; color = 'var(--warning)'; }
         else { status = `${diffDays}d`; color = 'var(--success)'; }
-        html += `<div class="row" style="${diffDays < 0 ? 'opacity:0.5;' : ''}">
-            <div><div style="font-size:14px;font-weight:600;">${d.label}</div><div style="font-size:12px;color:var(--text-secondary);">${d.desc}</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:${color};font-size:14px;">${status}</span>
-        </div>`;
+        html += `<div class="row" style="${diffDays < 0 ? 'opacity:0.5;' : ''}"><div><div style="font-size:14px;font-weight:600;">${d.label}</div><div style="font-size:12px;color:var(--text-secondary);">${d.desc}</div></div><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:${color};font-size:14px;">${status}</span></div>`;
     });
     el.innerHTML = html;
 }
 
-// ═══════════════════════════════════════
-// RESUMEN SEMANAL POPUP
-// ═══════════════════════════════════════
+// ── RESUMEN SEMANAL ──
 function showResumenSemanal() {
     const trips = getTrips().filter(t => t.mode === 'emp');
     if (trips.length === 0) return;
@@ -2034,9 +1810,7 @@ function showResumenSemanal() {
     openModal('resumen-semanal-modal');
 }
 
-// ═══════════════════════════════════════
-// DARK MODE
-// ═══════════════════════════════════════
+// ── DARK MODE ──
 function checkTime(){
     const h=new Date().getHours();
     const dark=h<6||h>=18;
@@ -2049,9 +1823,7 @@ function toggleTheme(){
     document.querySelectorAll('.theme-toggle').forEach(b=>b.textContent=dark?'☀️':'🌙');
 }
 
-// ═══════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════
+// ── INIT ──
 checkTime();
 setInterval(checkTime,60000);
 renderNav();
