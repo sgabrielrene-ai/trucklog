@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -227,7 +229,7 @@
     </style>
 </head>
 <body>
-
+ 
 <div class="oil-alert-overlay" id="oil-alert">
     <div class="oil-alert-card">
         <div style="font-size:52px;margin-bottom:12px;">🛢️</div>
@@ -236,7 +238,7 @@
         <button style="width:100%;padding:14px;border:none;border-radius:10px;background:var(--warning);color:white;font-size:16px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;" onclick="closeOilAlert()">Entendido, lo agendo 👍</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="pending-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -246,7 +248,7 @@
         <button class="btn btn-secondary" style="margin-top:16px;" onclick="closeModal('pending-modal')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="cobrar-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -255,7 +257,7 @@
         <button class="btn btn-secondary" style="margin-top:16px;" onclick="closeModal('cobrar-modal')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="edit-day-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -269,7 +271,7 @@
         <button class="btn btn-secondary" onclick="closeModal('edit-day-modal')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="edit-trip-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -278,11 +280,15 @@
             <label>Ruta / Nombre</label>
             <input type="text" id="edit-trip-route-input" placeholder="Ej: Morristown → PA">
         </div>
+        <div class="form-group">
+            <label>Precio ($)</label>
+            <input type="number" step="0.01" id="edit-trip-amount-input" placeholder="150.00">
+        </div>
         <button class="btn btn-primary" onclick="saveEditTrip()">💾 Guardar Cambio</button>
         <button class="btn btn-secondary" onclick="closeModal('edit-trip-modal')">Cancelar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="confirm-delete-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -295,7 +301,7 @@
         </div>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="gastos-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -305,7 +311,7 @@
         <button class="btn btn-secondary" style="margin-top:16px;" onclick="closeModal('gastos-modal')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="modal-1099">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -315,14 +321,14 @@
         <button class="btn btn-secondary" style="margin-top:16px;" onclick="closeModal('modal-1099')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="mode-switch-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
         <div class="mode-switch-card" id="mode-switch-content"></div>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="resumen-semanal-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -330,7 +336,7 @@
         <button class="btn btn-primary" onclick="closeModal('resumen-semanal-modal')" style="margin-top:8px;">¡A trabajar! 🚛</button>
     </div>
 </div>
-
+ 
 <div class="modal-overlay" id="plant-detail-modal">
     <div class="modal-sheet">
         <div class="modal-handle"></div>
@@ -339,7 +345,7 @@
         <button class="btn btn-secondary" onclick="closeModal('plant-detail-modal')">Cerrar</button>
     </div>
 </div>
-
+ 
 <div class="screen active" id="emp-dashboard">
     <div class="header">
         <div class="header-logo">
@@ -353,7 +359,7 @@
     </div>
     <div class="page" id="emp-dashboard-content"></div>
 </div>
-
+ 
 <div class="screen" id="emp-add">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">➕ Agregar</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -364,7 +370,7 @@
         <button class="quick-btn" onclick="showScreen('emp-add-gasto')" style="width:100%;"><span class="icon">📝</span><span>Gasto Personal 1099</span></button>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-add-trip">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:18px;font-weight:700;">🚛 Agregar Viaje</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -381,7 +387,7 @@
                 <div class="method-tab" id="emp-tab-hour" onclick="empSetPayMethod('hour')">⏱️ Por Hora</div>
             </div>
             <div id="emp-method-trip"><input type="number" id="emp-pay-flat" placeholder="Pago total: $150" oninput="empCalcTrip()"></div>
-            <div id="emp-method-ton" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Toneladas</label><input type="number" id="emp-pay-tons" placeholder="15" oninput="empCalcTrip()"></div><div><label style="font-size:12px;">$/Ton</label><input type="number" id="emp-pay-rate-ton" placeholder="25" oninput="empCalcTrip()"></div></div></div>
+            <div id="emp-method-ton" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Toneladas</label><input type="number" id="emp-pay-tons" placeholder="15" oninput="empCalcTrip()"></div><div><label style="font-size:12px;">$/Ton</label><input type="number" id="emp-pay-rate-ton" placeholder="25" oninput="empCalcTrip()"></div></div><div style="margin-top:10px;"><label style="font-size:12px;">% que te pagan</label><input type="number" id="emp-pay-pct-ton" value="30" oninput="empCalcTrip()"></div></div>
             <div id="emp-method-hour" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Horas</label><input type="number" id="emp-pay-hours" placeholder="8" oninput="empCalcTrip()"></div><div><label style="font-size:12px;">$/Hora</label><input type="number" id="emp-pay-rate-hour" placeholder="30" oninput="empCalcTrip()"></div></div></div>
             <div class="form-calc" id="emp-trip-total-display">$0.00</div>
         </div>
@@ -419,7 +425,7 @@
         <button class="btn btn-primary" style="margin-top:8px;" onclick="empFinishDay()">🏁 Terminar Día</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-trip-pasado">
     <div class="header"><button class="back-btn" onclick="closeModal('edit-day-modal'); showScreen('emp-historial')">←</button><h1 style="font-size:16px;font-weight:700;">➕ Viaje Fecha Pasada</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -433,7 +439,7 @@
                 <div class="method-tab" id="pasado-tab-hour" onclick="pasadoSetMethod('hour')">⏱️ Por Hora</div>
             </div>
             <div id="pasado-method-trip"><input type="number" id="pasado-pay-flat" placeholder="Pago total: $150" oninput="pasadoCalc()"></div>
-            <div id="pasado-method-ton" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Toneladas</label><input type="number" id="pasado-pay-tons" oninput="pasadoCalc()"></div><div><label style="font-size:12px;">$/Ton</label><input type="number" id="pasado-pay-rate-ton" oninput="pasadoCalc()"></div></div></div>
+            <div id="pasado-method-ton" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Toneladas</label><input type="number" id="pasado-pay-tons" oninput="pasadoCalc()"></div><div><label style="font-size:12px;">$/Ton</label><input type="number" id="pasado-pay-rate-ton" oninput="pasadoCalc()"></div></div><div id="pasado-pct-ton-wrap" style="margin-top:10px;display:none;"><label style="font-size:12px;">% que te pagan</label><input type="number" id="pasado-pay-pct-ton" value="30" oninput="pasadoCalc()"></div></div>
             <div id="pasado-method-hour" style="display:none;"><div class="form-row"><div><label style="font-size:12px;">Horas</label><input type="number" id="pasado-pay-hours" oninput="pasadoCalc()"></div><div><label style="font-size:12px;">$/Hora</label><input type="number" id="pasado-pay-rate-hour" oninput="pasadoCalc()"></div></div></div>
             <div class="form-calc" id="pasado-total-display">$0.00</div>
         </div>
@@ -455,7 +461,7 @@
         <button class="btn btn-secondary" onclick="showScreen('emp-historial')">Cancelar</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-add-miles">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:18px;font-weight:700;">🛣️ Millas del Día</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -464,7 +470,7 @@
         <button class="btn btn-primary" onclick="saveEmpMiles()">💾 Guardar Millas</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-add-gasto">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-add')">←</button><h1 style="font-size:16px;font-weight:700;">📝 Gasto Personal 1099</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -486,22 +492,22 @@
         <button class="btn btn-primary" style="background:var(--purple);" onclick="saveGasto()">💾 Guardar Gasto</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-historial">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">📋 Historial</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-historial-content"></div>
 </div>
-
+ 
 <div class="screen" id="emp-finances">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">💰 Finanzas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-finances-content"></div>
 </div>
-
+ 
 <div class="screen" id="emp-savings-camion">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-finances')">←</button><h1 style="font-size:20px;font-weight:700;">🚛 Mi Camión</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="emp-camion-detail-content"></div>
 </div>
-
+ 
 <div class="screen" id="emp-settings">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">⚙️ Ajustes</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -533,7 +539,7 @@
         </div>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-consejo">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-settings')">←</button><h1 style="font-size:18px;font-weight:700;">🧠 El Consejo</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -564,7 +570,7 @@
         </div>
     </div>
 </div>
-
+ 
 <div class="screen" id="oo-dashboard">
     <div class="header">
         <div class="header-logo">
@@ -578,7 +584,7 @@
     </div>
     <div class="page" id="oo-dashboard-content"></div>
 </div>
-
+ 
 <div class="screen" id="oo-add">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-dashboard')">←</button><h1 style="font-size:20px;font-weight:700;">➕ Agregar</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -590,7 +596,7 @@
         <button class="quick-btn" onclick="showScreen('add-miles')" style="width:100%;"><span class="icon">🛣️</span><span>Millas del Día</span></button>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-trip">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🚛 Agregar Viaje</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -652,7 +658,7 @@
         <button class="btn btn-primary" style="margin-top:8px;" onclick="ooFinishDay()">🏁 Terminar Día</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-miles">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🛣️ Millas del Día</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -662,7 +668,7 @@
         <button class="btn btn-primary" onclick="saveMiles()">💾 Guardar Millas</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-fuel">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">⛽ Agregar Diésel</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -676,7 +682,7 @@
         <button class="btn btn-primary" onclick="saveFuel()">💾 Guardar Diésel</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-expense">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-add')">←</button><h1 style="font-size:18px;font-weight:700;">🔧 Agregar Gasto</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -689,22 +695,22 @@
         <button class="btn btn-primary" onclick="saveExpense()">💾 Guardar Gasto</button>
     </div>
 </div>
-
+ 
 <div class="screen" id="oo-stats">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">📊 Estadísticas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-stats-content"></div>
 </div>
-
+ 
 <div class="screen" id="oo-historial">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-stats')">←</button><h1 style="font-size:20px;font-weight:700;">📅 Historial</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-historial-content"></div>
 </div>
-
+ 
 <div class="screen" id="oo-finances">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">💰 Finanzas</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page" id="oo-finances-content"></div>
 </div>
-
+ 
 <div class="screen" id="oo-settings">
     <div class="header"><h1 style="font-size:20px;font-weight:700;">⚙️ Ajustes</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -726,7 +732,7 @@
         <div class="card"><h2>📄 Información</h2><div class="row"><span>Versión</span><span class="num">4.7.1</span></div><div class="row"><span>Modo activo</span><span style="color:var(--success);font-weight:600;">Owner Operator</span></div></div>
     </div>
 </div>
-
+ 
 <div class="screen" id="consejo-export">
     <div class="header"><button class="back-btn" onclick="showScreen('oo-settings')">←</button><h1 style="font-size:18px;font-weight:700;">🧠 El Consejo</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -744,7 +750,7 @@
         <div id="json-output-box" class="json-output"></div>
     </div>
 </div>
-
+ 
 <div class="screen" id="emp-directorio">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-historial')">←</button><h1 style="font-size:18px;font-weight:700;">🏭 Directorio</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -752,7 +758,7 @@
         <div id="directorio-list"></div>
     </div>
 </div>
-
+ 
 <div class="screen" id="add-plant">
     <div class="header"><button class="back-btn" onclick="showScreen('emp-directorio')">←</button><h1 style="font-size:18px;font-weight:700;">🏭 Nueva Planta/Cantera</h1><button class="theme-toggle" onclick="toggleTheme()">🌙</button></div>
     <div class="page">
@@ -770,14 +776,14 @@
         <button class="btn btn-secondary" onclick="showScreen('emp-directorio')">Cancelar</button>
     </div>
 </div>
-
+ 
 <div class="bottom-nav" id="bottom-nav"></div>
-
+ 
 <script>
 const LS = { TRIPS:'tl_trips', EXPENSES:'tl_expenses', MILES:'tl_miles', GOALS:'tl_goals', FUEL:'tl_fuel', OO_EXPENSES:'tl_oo_expenses', SETTINGS:'tl_settings', PLANTS:'tl_plants' };
 function lsGet(key) { try { return JSON.parse(localStorage.getItem(key)) || null; } catch { return null; } }
 function lsSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) { console.error('LS error', e); } }
-
+ 
 let currentMode = 'emp';
 let payMethod = 'trip', empPayMethod = 'trip', pasadoMethod = 'trip';
 let payStatus = 'paid';
@@ -788,9 +794,9 @@ let currentEditDay = null;
 let tripToDelete = null;
 let tripToEdit = null;
 let currentPlantId = null;
-
+ 
 const OIL_LIMIT = 15000, OIL_ALERT_THRESHOLD = 500;
-
+ 
 function getTrips() { return lsGet(LS.TRIPS) || []; }
 function saveTrips(arr) { lsSet(LS.TRIPS, arr); }
 function getExpenses() { return lsGet(LS.EXPENSES) || []; }
@@ -807,7 +813,7 @@ function getGoals() { return lsGet(LS.GOALS) || { camion:{ahorrado:0,meta:15000}
 function saveGoals(g) { lsSet(LS.GOALS, g); }
 function getSettings() { return lsGet(LS.SETTINGS) || { currentMiles:0 }; }
 function saveSettings(s) { lsSet(LS.SETTINGS, s); }
-
+ 
 // ── HELPERS ──
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
 // FIX 1: today() usa fecha local NY, no UTC
@@ -835,7 +841,7 @@ function getMondayOfWeek(dateStr) {
 function getWeekKey(dateStr) { return getMondayOfWeek(dateStr); }
 function waitLabel(mins) { if (!mins || mins === 0) return ''; return mins === 999 ? '3hr+' : mins >= 60 ? `${mins/60}hr` : `${mins}m`; }
 function fmt$(n) { return '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0}); }
-
+ 
 // FIX 2: rangos de semana usan fecha local
 function getPrevWeekRange() {
     const now = new Date();
@@ -860,11 +866,11 @@ function getThisMonthRange() {
     const lastDay = new Date(y, m+1, 0);
     return { start: `${y}-${String(m+1).padStart(2,'0')}-01`, end: toLocalStr(lastDay) };
 }
-
+ 
 // ── NAV ──
 const empNavMap = { 'emp-dashboard':'nav-home','emp-add':'nav-add','emp-add-trip':'nav-add','emp-add-miles':'nav-add','emp-add-gasto':'nav-add','add-trip-pasado':'nav-hist','emp-historial':'nav-hist','emp-directorio':'nav-hist','add-plant':'nav-hist','emp-finances':'nav-fin','emp-savings-camion':'nav-fin','emp-settings':'nav-cfg','emp-consejo':'nav-cfg' };
 const ooNavMap = { 'oo-dashboard':'nav-home','oo-add':'nav-add','add-trip':'nav-add','add-miles':'nav-add','add-fuel':'nav-add','add-expense':'nav-add','oo-stats':'nav-stats','oo-historial':'nav-stats','consejo-export':'nav-cfg','oo-finances':'nav-fin','oo-settings':'nav-cfg' };
-
+ 
 function renderNav() {
     const nav = document.getElementById('bottom-nav');
     if (currentMode === 'emp') {
@@ -883,7 +889,7 @@ function renderNav() {
             <a class="nav-item" onclick="showScreen('oo-settings')" id="nav-cfg"><span class="icon">⚙️</span><span>Ajustes</span></a>`;
     }
 }
-
+ 
 function showScreen(id) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     const screen = document.getElementById(id);
@@ -904,7 +910,7 @@ function showScreen(id) {
     if (id === 'oo-finances') renderOOFinances(); // FIX 3
     if (id === 'emp-settings') renderIRSReminders();
 }
-
+ 
 // ── EMP DASHBOARD ──
 function renderEmpDashboard() {
     const trips = getTrips().filter(t => t.mode === 'emp');
@@ -924,13 +930,17 @@ function renderEmpDashboard() {
     const prev = getPrevWeekRange();
     const prevTrips = trips.filter(t => t.date >= prev.start && t.date <= prev.end);
     const prevTotal = prevTrips.reduce((s,t) => s+t.amount, 0);
+    const wk = getThisWeekRange();
+    const wkTrips = trips.filter(t => t.date >= wk.start && t.date <= wk.end);
+    const wkTotal = wkTrips.reduce((s,t) => s+t.amount, 0);
+    const wkDays = [...new Set(wkTrips.map(t=>t.date))].length;
     const mo = getThisMonthRange();
     const moTrips = trips.filter(t => t.date >= mo.start && t.date <= mo.end);
     const moTotal = moTrips.reduce((s,t) => s+t.amount, 0);
     const moDays = [...new Set(moTrips.map(t=>t.date))].length;
-    const daysInMonth = new Date(new Date().getFullYear(), new Date().getMonth()+1, 0).getDate();
-    const dayOfMonth = new Date().getDate();
-    const projection = moDays > 0 ? Math.round((moTotal / dayOfMonth) * daysInMonth) : 0;
+    const avgPerDayWorked = moDays > 0 ? moTotal / moDays : 0;
+    const workingDaysEstimate = 22;
+    const projection = moDays > 0 ? Math.round(avgPerDayWorked * workingDaysEstimate) : 0;
     let html = '';
     if (todayTotal > 0) {
         html += `<div class="tap-card" onclick="openEditDayModal('${todayStr}')"><div class="tc-label">📅 Hoy — tap para ver</div><div class="tc-amount" style="color:var(--success);">${fmt$(todayTotal)}</div><div class="tc-sub">${todayTrips.length} viajes</div></div>`;
@@ -940,11 +950,12 @@ function renderEmpDashboard() {
     if (prevTotal > 0) {
         html += `<div class="cobrar-banner" onclick="openCobrarModal()"><div><div class="cb-label">💰 Por Cobrar — Sem ${fmtDate(prev.start).split(' ').slice(1).join(' ')}–${fmtDate(prev.end).split(' ').slice(1).join(' ')}</div><div class="cb-sub">Semana pasada • tap para ver desglose →</div></div><div style="text-align:right;"><div class="cb-amount">${fmt$(prevTotal)}</div><div class="cb-arrow">Ver detalle →</div></div></div>`;
     }
-    html += `<div class="stats-grid"><div class="stat-card"><h3>Este Mes</h3><div class="value" style="color:var(--success);font-size:22px;">${fmt$(moTotal)}</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">${moDays} días</div></div><div class="stat-card"><h3>Proyección</h3><div class="value" style="color:var(--accent);font-size:22px;">${fmt$(projection)}</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">fin de mes</div></div></div>`;
+    html += `<div class="stats-grid"><div class="stat-card"><h3>Esta Semana</h3><div class="value" style="color:var(--success);font-size:22px;">${fmt$(wkTotal)}</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">${wkDays} días</div></div><div class="stat-card"><h3>Proyección</h3><div class="value" style="color:var(--accent);font-size:22px;">${fmt$(projection)}</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">fin de mes</div></div></div>`;
+    html += `<div class="stat-card" style="text-align:center;margin:0 auto 14px auto;width:calc(50% - 6px);"><h3>Este Mes</h3><div class="value" style="color:var(--success);font-size:22px;">${fmt$(moTotal)}</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">${moDays} días</div></div>`;
     html += `<div class="tap-card" onclick="showScreen('emp-historial')" style="display:flex;justify-content:space-between;align-items:center;"><div><div class="tc-label">Historial Completo</div><div style="font-size:16px;font-weight:700;">Ver todos mis viajes →</div></div><div style="font-size:28px;">📋</div></div>`;
     el.innerHTML = html;
 }
-
+ 
 // ── EMP HISTORIAL ──
 function renderEmpHistorial() {
     const trips = getTrips().filter(t => t.mode === 'emp');
@@ -1020,14 +1031,14 @@ function renderEmpHistorial() {
     html += `<button class="btn btn-primary" style="margin-top:12px;" onclick="showScreen('add-plant')">➕ Agregar Planta o Cantera</button></div>`;
     el.innerHTML = html;
 }
-
+ 
 function toggleSection(id) {
     const body = document.getElementById(id);
     const arrow = document.getElementById('arr-' + id);
     body.classList.toggle('open');
     if (arrow) arrow.classList.toggle('open');
 }
-
+ 
 // ── DIRECTORIO ──
 function renderDirectorio() {
     const plants = getPlants();
@@ -1035,7 +1046,7 @@ function renderDirectorio() {
     if (plants.length === 0) { el.innerHTML = `<div class="empty-state"><div class="es-icon">🏭</div><div class="es-title">Directorio vacío</div><div class="es-sub">Agrega las plantas y canteras donde trabajas.</div></div>`; return; }
     el.innerHTML = plants.map(p => `<div class="plant-item" onclick="openPlantDetail('${p.id}')"><div><div class="plant-name">🏭 ${p.name}</div>${p.address ? `<div style="font-size:12px;color:var(--text-secondary);margin-top:2px;">${p.address}</div>` : ''}</div><span class="plant-arrow">›</span></div>`).join('');
 }
-
+ 
 function savePlant() {
     const name = document.getElementById('plant-name').value.trim();
     if (!name) { alert('Ingresa el nombre'); return; }
@@ -1054,7 +1065,7 @@ function savePlant() {
     document.getElementById('plant-desc').value = '';
     showScreen('emp-directorio');
 }
-
+ 
 function openPlantDetail(id) {
     currentPlantId = id;
     const p = getPlants().find(x => x.id === id);
@@ -1063,7 +1074,7 @@ function openPlantDetail(id) {
     document.getElementById('plant-detail-content').innerHTML = `<div class="plant-detail-header"><div class="plant-detail-name">🏭 ${p.name}</div>${p.address ? `<div class="plant-detail-addr">📍 ${p.address}</div>` : ''}${priceStr}${p.desc ? `<div class="plant-detail-desc">📝 ${p.desc}</div>` : ''}</div>`;
     openModal('plant-detail-modal');
 }
-
+ 
 function deletePlant() {
     if (!currentPlantId) return;
     savePlants(getPlants().filter(p => p.id !== currentPlantId));
@@ -1072,7 +1083,7 @@ function deletePlant() {
     renderDirectorio();
     renderEmpHistorial();
 }
-
+ 
 // ── EMP FINANZAS ──
 function renderEmpFinances() {
     const trips = getTrips().filter(t => t.mode === 'emp');
@@ -1111,7 +1122,7 @@ function renderEmpFinances() {
     const gastosHtml = Object.keys(catTotals).length === 0 ? '<div style="text-align:center;padding:20px;color:var(--text-secondary);">Sin gastos registrados</div>' : Object.entries(catTotals).map(([k,v]) => `<div class="row"><span>${catIcons[k]||'📝'} ${k}</span><span class="num">${fmt$(v)}</span></div>`).join('') + (expTotal > 0 ? `<div style="padding:14px 0 0;border-top:2px solid var(--border);display:flex;justify-content:space-between;margin-top:4px;"><span style="font-size:16px;font-weight:700;">Total del año</span><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--purple);font-size:18px;">${fmt$(expTotal)}</span></div>` : '');
     document.getElementById('gastos-modal-content').innerHTML = gastosHtml;
 }
-
+ 
 function renderEmpCamionDetail() {
     const goals = getGoals();
     const camPct = Math.min(100, Math.round((goals.camion.ahorrado / goals.camion.meta) * 100));
@@ -1133,7 +1144,7 @@ function renderEmpCamionDetail() {
         </div>
         <button class="btn btn-primary" onclick="addDeposit('camion')">+ Registrar Depósito</button>`;
 }
-
+ 
 // ── OO DASHBOARD ──
 function renderOODashboard() {
     const trips = getTrips().filter(t => t.mode === 'oo');
@@ -1170,7 +1181,7 @@ function renderOODashboard() {
     el.innerHTML = html;
     renderPendingModal();
 }
-
+ 
 function renderPendingModal() {
     const trips = getTrips().filter(t => t.mode === 'oo' && t.status === 'pending');
     const el = document.getElementById('pending-trips-list');
@@ -1181,7 +1192,7 @@ function renderPendingModal() {
     totalEl.style.display='block';
     totalEl.textContent = `Total pendiente: ${fmt$(total)}`;
 }
-
+ 
 function markTripPaid(id) {
     const trips = getTrips();
     const idx = trips.findIndex(t=>t.id===id);
@@ -1189,7 +1200,7 @@ function markTripPaid(id) {
     renderPendingModal();
     renderOODashboard();
 }
-
+ 
 // ── OO STATS ──
 function renderOOStats() {
     const trips = getTrips().filter(t => t.mode === 'oo');
@@ -1211,7 +1222,7 @@ function renderOOStats() {
     const clientRows = Object.entries(clientTotals).sort((a,b)=>b[1]-a[1]).map(([k,v]) => `<div class="row"><span>${k}</span><span class="pos">${fmt$(v)}</span></div>`).join('');
     el.innerHTML = `<div class="stats-grid"><div class="stat-card"><h3>🛣️ Millas/Mes</h3><div class="value" style="color:var(--accent);">${moMiles.toLocaleString()}</div></div><div class="stat-card"><h3>💰 Prom/Día</h3><div class="value" style="color:var(--success);">${fmt$(avgPerDay)}</div></div><div class="stat-card"><h3>📈 Mejor Sem.</h3><div class="value">${fmt$(bestWk)}</div></div><div class="stat-card"><h3>🚛 Viajes/Mes</h3><div class="value">${moTrips.length}</div></div></div>${clientRows ? `<div class="card"><h2>👥 Ingresos por Cliente</h2>${clientRows}</div>` : ''}<div class="card"><a class="link-btn" onclick="showScreen('oo-historial')" style="margin:0;font-size:16px;">📅 Ver Historial Completo →</a></div>`;
 }
-
+ 
 // ── OO HISTORIAL ──
 function renderOOHistorial() {
     const trips = getTrips().filter(t => t.mode === 'oo');
@@ -1252,7 +1263,7 @@ function renderOOHistorial() {
     });
     el.innerHTML = html;
 }
-
+ 
 // ── OO FINANCES ──
 function renderOOFinances() {
     const trips = getTrips().filter(t => t.mode === 'oo');
@@ -1278,7 +1289,7 @@ function renderOOFinances() {
         <div class="savings-goal"><div class="savings-goal-header"><div class="savings-goal-name">🚨 Fondo Emergencia</div><div class="savings-goal-amount" style="color:var(--warning);">${fmt$(goals.emergencia.ahorrado)} / ${fmt$(goals.emergencia.meta)}</div></div><div class="progress-wrap"><div class="progress-label"><span>${emergPct}%</span><span>Faltan ${fmt$(goals.emergencia.meta-goals.emergencia.ahorrado)}</span></div><div class="progress-bar"><div class="progress-fill" style="width:${emergPct}%;background:var(--warning);"></div></div></div><button class="btn btn-secondary btn-sm" style="margin-top:10px;" onclick="addDeposit('emergencia')">+ Depósito</button></div>
         <div class="savings-goal"><div class="savings-goal-header"><div class="savings-goal-name">🏠 Casa Propia</div><div class="savings-goal-amount" style="color:var(--accent);">${fmt$(goals.casa.ahorrado)} / ${fmt$(goals.casa.meta)}</div></div><div class="progress-wrap"><div class="progress-label"><span>${casaPct}%</span><span>Faltan ${fmt$(goals.casa.meta-goals.casa.ahorrado)}</span></div><div class="progress-bar"><div class="progress-fill" style="width:${casaPct>0?casaPct:1}%;background:var(--accent);"></div></div></div><button class="btn btn-secondary btn-sm" style="margin-top:10px;" onclick="addDeposit('casa')">+ Depósito</button></div>`;
 }
-
+ 
 // ── EDIT DAY MODAL ──
 function openEditDayModal(date) {
     currentEditDay = date;
@@ -1299,24 +1310,27 @@ function openEditDayModal(date) {
     document.getElementById('pasado-date-label').innerHTML = `📅 Agregando viaje para: <strong>${fmtDate(date)}</strong>`;
     openModal('edit-day-modal');
 }
-
+ 
 // ── EDIT TRIP ──
 function openEditTripModal(id) {
     const t = getTrips().find(x => x.id === id);
     if (!t) return;
     tripToEdit = id;
     document.getElementById('edit-trip-route-input').value = t.route;
+    document.getElementById('edit-trip-amount-input').value = t.amount;
     closeModal('edit-day-modal');
     openModal('edit-trip-modal');
 }
-
+ 
 function saveEditTrip() {
     if (!tripToEdit) return;
     const newRoute = document.getElementById('edit-trip-route-input').value.trim();
+    const newAmount = parseFloat(document.getElementById('edit-trip-amount-input').value);
     if (!newRoute) { alert('Ingresa la ruta'); return; }
+    if (isNaN(newAmount) || newAmount < 0) { alert('Ingresa un precio válido'); return; }
     const trips = getTrips();
     const idx = trips.findIndex(t => t.id === tripToEdit);
-    if (idx !== -1) { trips[idx].route = newRoute; saveTrips(trips); }
+    if (idx !== -1) { trips[idx].route = newRoute; trips[idx].amount = newAmount; saveTrips(trips); }
     closeModal('edit-trip-modal');
     tripToEdit = null;
     renderEmpHistorial();
@@ -1325,7 +1339,7 @@ function saveEditTrip() {
     renderOODashboard();
     alert('✅ Viaje actualizado');
 }
-
+ 
 // ── COBRAR MODAL ──
 function openCobrarModal() {
     const prev = getPrevWeekRange();
@@ -1342,7 +1356,7 @@ function openCobrarModal() {
     document.getElementById('cobrar-modal-content').innerHTML = html;
     openModal('cobrar-modal');
 }
-
+ 
 // ── DELETE TRIP ──
 function askDeleteTrip(id, source) {
     const t = getTrips().find(x=>x.id===id);
@@ -1351,7 +1365,7 @@ function askDeleteTrip(id, source) {
     document.getElementById('confirm-delete-desc').textContent = `${t.route} — ${fmt$(t.amount)}. Esta acción no se puede deshacer.`;
     openModal('confirm-delete-modal');
 }
-
+ 
 function confirmDeleteTrip() {
     if (!tripToDelete) return;
     saveTrips(getTrips().filter(t => t.id !== tripToDelete.id));
@@ -1364,7 +1378,7 @@ function confirmDeleteTrip() {
     renderEmpDashboard();
     renderOODashboard();
 }
-
+ 
 // ── MULTIPLICADOR ──
 function empSetMult(n, el) {
     empMult = n;
@@ -1377,7 +1391,7 @@ function ooSetMult(n, el) {
     document.querySelectorAll('#oo-mult-selector .mult-btn').forEach(b => b.classList.remove('active'));
     el.classList.add('active');
 }
-
+ 
 // ── EMP SAVE TRIP ──
 let empSessionTrips = [];
 function empSetPayMethod(m) {
@@ -1388,7 +1402,7 @@ function empSetPayMethod(m) {
 function empCalcTrip() {
     let unit = 0;
     if (empPayMethod==='trip') unit = parseFloat(document.getElementById('emp-pay-flat').value)||0;
-    else if (empPayMethod==='ton') { const t=parseFloat(document.getElementById('emp-pay-tons').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-ton').value)||0; unit=t*r; }
+    else if (empPayMethod==='ton') { const t=parseFloat(document.getElementById('emp-pay-tons').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-ton').value)||0; const p=parseFloat(document.getElementById('emp-pay-pct-ton').value)||100; unit=t*r*(p/100); }
     else if (empPayMethod==='hour') { const h=parseFloat(document.getElementById('emp-pay-hours').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-hour').value)||0; unit=h*r; }
     const total = unit * empMult;
     document.getElementById('emp-trip-total-display').textContent = '$'+total.toFixed(2);
@@ -1406,7 +1420,7 @@ function empSaveTrip() {
     if (!route) { alert('Ingresa la ruta'); return; }
     let unitAmount = 0, methodLabel = '';
     if (empPayMethod==='trip') { unitAmount=parseFloat(document.getElementById('emp-pay-flat').value)||0; methodLabel='Por viaje'; }
-    else if (empPayMethod==='ton') { const t=parseFloat(document.getElementById('emp-pay-tons').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-ton').value)||0; unitAmount=t*r; methodLabel=`${t} ton × $${r}/ton`; }
+    else if (empPayMethod==='ton') { const t=parseFloat(document.getElementById('emp-pay-tons').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-ton').value)||0; const p=parseFloat(document.getElementById('emp-pay-pct-ton').value)||100; unitAmount=t*r*(p/100); methodLabel=`${t} ton × $${r}/ton × ${p}%`; }
     else if (empPayMethod==='hour') { const h=parseFloat(document.getElementById('emp-pay-hours').value)||0; const r=parseFloat(document.getElementById('emp-pay-rate-hour').value)||0; unitAmount=h*r; methodLabel=`${h} hrs × $${r}/hr`; }
     if (unitAmount<=0) { alert('Ingresa el pago'); return; }
     const notes = document.getElementById('emp-trip-notes').value.trim();
@@ -1449,17 +1463,18 @@ function empFinishDay() {
     empRenderSessionTrips();
     showScreen('emp-dashboard');
 }
-
+ 
 // ── PASADO TRIP ──
 function pasadoSetMethod(m) {
     pasadoMethod=m;
     ['trip','ton','hour'].forEach(t => { document.getElementById('pasado-tab-'+t).classList.toggle('active',t===m); document.getElementById('pasado-method-'+t).style.display=t===m?'block':'none'; });
+    document.getElementById('pasado-pct-ton-wrap').style.display = (m==='ton' && currentMode==='emp') ? 'block' : 'none';
     pasadoCalc();
 }
 function pasadoCalc() {
     let total=0;
     if (pasadoMethod==='trip') total=parseFloat(document.getElementById('pasado-pay-flat').value)||0;
-    else if (pasadoMethod==='ton') { const t=parseFloat(document.getElementById('pasado-pay-tons').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-ton').value)||0; total=t*r; }
+    else if (pasadoMethod==='ton') { const t=parseFloat(document.getElementById('pasado-pay-tons').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-ton').value)||0; const p=currentMode==='emp' ? (parseFloat(document.getElementById('pasado-pay-pct-ton').value)||100) : 100; total=t*r*(p/100); }
     else if (pasadoMethod==='hour') { const h=parseFloat(document.getElementById('pasado-pay-hours').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-hour').value)||0; total=h*r; }
     document.getElementById('pasado-total-display').textContent='$'+total.toFixed(2);
 }
@@ -1473,7 +1488,7 @@ function savePasadoTrip() {
     if (!route) { alert('Ingresa la ruta'); return; }
     let amount=0, methodLabel='';
     if (pasadoMethod==='trip') { amount=parseFloat(document.getElementById('pasado-pay-flat').value)||0; methodLabel='Por viaje'; }
-    else if (pasadoMethod==='ton') { const t=parseFloat(document.getElementById('pasado-pay-tons').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-ton').value)||0; amount=t*r; methodLabel=`${t} ton × $${r}/ton`; }
+    else if (pasadoMethod==='ton') { const t=parseFloat(document.getElementById('pasado-pay-tons').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-ton').value)||0; const p=currentMode==='emp' ? (parseFloat(document.getElementById('pasado-pay-pct-ton').value)||100) : 100; amount=t*r*(p/100); methodLabel = currentMode==='emp' ? `${t} ton × $${r}/ton × ${p}%` : `${t} ton × $${r}/ton`; }
     else if (pasadoMethod==='hour') { const h=parseFloat(document.getElementById('pasado-pay-hours').value)||0; const r=parseFloat(document.getElementById('pasado-pay-rate-hour').value)||0; amount=h*r; methodLabel=`${h} hrs × $${r}/hr`; }
     if (amount<=0) { alert('Ingresa el pago'); return; }
     const notes = document.getElementById('pasado-notes').value.trim();
@@ -1489,7 +1504,7 @@ function savePasadoTrip() {
     document.querySelector('#pasado-wait-selector .wait-btn').classList.add('active');
     showScreen('emp-historial');
 }
-
+ 
 // ── MILES & GASTOS ──
 function saveEmpMiles() {
     const miles = parseFloat(document.getElementById('emp-miles-input').value)||0;
@@ -1518,7 +1533,7 @@ function saveGasto() {
     document.getElementById('gasto-desc').value='';
     showScreen('emp-dashboard');
 }
-
+ 
 // ── OO SAVE TRIP ──
 let ooSessionTrips = [];
 function setPayMethod(m) {
@@ -1596,7 +1611,7 @@ function ooFinishDay() {
     renderOOSessionTrips();
     showScreen('oo-dashboard');
 }
-
+ 
 // ── OO MILES, FUEL, EXPENSE ──
 function checkOilWarning() {
     const settings=getSettings();
@@ -1645,7 +1660,7 @@ function saveExpense(){
     document.getElementById('expense-amount').value='';document.getElementById('expense-desc').value='';
     showScreen('oo-dashboard');
 }
-
+ 
 // ── DEPOSITS ──
 function addDeposit(goalKey) {
     const amt = parseFloat(prompt(`Monto del depósito para ${goalKey === 'ambar' ? 'Ámbar' : goalKey === 'camion' ? 'Camión' : goalKey === 'emergencia' ? 'Emergencia' : 'Casa'} ($):`));
@@ -1657,7 +1672,7 @@ function addDeposit(goalKey) {
     else { renderOOFinances(); }
     alert(`✅ Depósito de ${fmt$(amt)} registrado`);
 }
-
+ 
 // ── MODE SWITCH ──
 function openModeSwitch() {
     const content=document.getElementById('mode-switch-content');
@@ -1675,7 +1690,7 @@ function switchMode(mode) {
     if (mode==='oo'){showScreen('oo-dashboard');setTimeout(()=>alert('🚛 Modo Owner Operator activado.'),300);}
     else showScreen('emp-dashboard');
 }
-
+ 
 // ── MODALS & ACCORDION ──
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
@@ -1691,7 +1706,7 @@ function toggleDayAcc(header){
     trips.classList.toggle('open');
     if (arrow) arrow.classList.toggle('open');
 }
-
+ 
 // ── JSON EXPORT ──
 function getFilteredTrips(mode, period) {
     const trips = getTrips().filter(t => t.mode === mode);
@@ -1751,7 +1766,7 @@ function copyJSON(){
     const text=document.getElementById('json-output-box').textContent;
     if (navigator.clipboard){navigator.clipboard.writeText(text).then(()=>{const btn=document.getElementById('copy-json-btn');btn.textContent='✅ ¡Copiado!';btn.style.background='var(--success)';btn.style.color='white';setTimeout(()=>{btn.textContent='📋 Copiar';btn.style.background='';btn.style.color='';},2000);});}
 }
-
+ 
 // ── IRS TRIMESTRAL ──
 function renderIRSReminders() {
     const el = document.getElementById('irs-reminders-content');
@@ -1778,7 +1793,7 @@ function renderIRSReminders() {
     });
     el.innerHTML = html;
 }
-
+ 
 // ── RESUMEN SEMANAL ──
 function showResumenSemanal() {
     const trips = getTrips().filter(t => t.mode === 'emp');
@@ -1809,7 +1824,7 @@ function showResumenSemanal() {
         ${prevTotal > 0 ? `<div style="background:var(--accent-light);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:13px;color:var(--accent);font-weight:600;">💰 Por Cobrar (sem. pasada)</span><span style="font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);">${fmt$(prevTotal)}</span></div>` : ''}`;
     openModal('resumen-semanal-modal');
 }
-
+ 
 // ── DARK MODE ──
 function checkTime(){
     const h=new Date().getHours();
@@ -1822,7 +1837,7 @@ function toggleTheme(){
     const dark=document.body.classList.contains('dark-mode');
     document.querySelectorAll('.theme-toggle').forEach(b=>b.textContent=dark?'☀️':'🌙');
 }
-
+ 
 // ── INIT ──
 checkTime();
 setInterval(checkTime,60000);
@@ -1836,3 +1851,7 @@ setTimeout(showResumenSemanal, 600);
 </script>
 </body>
 </html>
+ 
+
+
+
